@@ -4,7 +4,7 @@
 
 int sound_pin=A0;
 #define TimerHz 32
-#define NORMALISE true
+#define NORMALISE false
 
 uint16_t timer = 0;
 float time = 0;
@@ -15,7 +15,7 @@ uint16_t sensorMin = 0xFFFF;
 uint16_t sensorMax = 0x0000;
 
 enum generator_states {sine_wave, square_wave, triangle_wave, sensor};
-int state = sensor; // State of system
+int state = sine_wave; // State of system
 
 uint16_t * buffer  = (uint16_t*)malloc(buf_size * sizeof(uint16_t)); // malloc for circular buffer
 cbuf_handle_t circularBuffer = circular_buf_init(buffer, buf_size); // init buffer
@@ -40,7 +40,7 @@ void setup() {
 }
 
 ISR(TIMER1_COMPA_vect){
-    time = prescaledNormaliser(timer, 0, TimerHz);
+    time = prescaledNormaliser(timer, 0, TimerHz*0.5);
     // Generate Data
     switch(state) {
         case sine_wave:
