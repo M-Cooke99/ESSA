@@ -8,7 +8,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "Vsync",
+					"strict" : false
+				},
+				{
 					"name" : "Red",
+					"strict" : false
+				},
+				{
+					"name" : "Green",
+					"strict" : false
+				},
+				{
+					"name" : "Blue",
 					"strict" : false
 				},
 				{

@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+0QuartusFace/db/
+0QuartusFace/incremental_db/

@@ -17,7 +17,7 @@ module color_Thirds(
 	 // Yellow [255,255,51]
 	 // Green  [51,255,51]
 
-	if (pixel_on) begin
+	if (pixel_on == 1) begin
 	
 		  if(y > 320)begin
 				// make output Red
