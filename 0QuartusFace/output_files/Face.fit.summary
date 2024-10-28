@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Oct 28 14:37:47 2024
+Fitter Status : Successful - Mon Oct 28 15:17:40 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Face
 Top-level Entity Name : Block1
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 42 / 6,272 ( < 1 % )
-    Total combinational functions : 42 / 6,272 ( < 1 % )
+Total logic elements : 43 / 6,272 ( < 1 % )
+    Total combinational functions : 43 / 6,272 ( < 1 % )
     Dedicated logic registers : 20 / 6,272 ( < 1 % )
 Total registers : 20
 Total pins : 7 / 92 ( 8 % )

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Oct 28 14:37:44 2024
+Analysis & Synthesis Status : Successful - Mon Oct 28 15:17:37 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Face
 Top-level Entity Name : Block1
 Family : Cyclone IV E
-Total logic elements : 42
-    Total combinational functions : 42
+Total logic elements : 43
+    Total combinational functions : 43
     Dedicated logic registers : 20
 Total registers : 20
 Total pins : 7

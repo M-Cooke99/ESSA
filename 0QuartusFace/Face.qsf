@@ -75,12 +75,12 @@ set_global_assignment -name VERILOG_FILE TestPatternCode.v
 set_global_assignment -name VERILOG_FILE output_files/InputIntOutBitmap.v
 set_global_assignment -name VERILOG_FILE output_files/DecisionMaker.v
 set_global_assignment -name VERILOG_FILE output_files/BitMapReader.v
-set_global_assignment -name BDF_FILE Block2.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE colorThirds.v
 set_location_assignment PIN_105 -to Green
 set_location_assignment PIN_106 -to Red
 set_location_assignment PIN_104 -to Blue
+set_global_assignment -name VERILOG_FILE output_files/pixelPattern2.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

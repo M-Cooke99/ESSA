@@ -272,19 +272,34 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 672 280 704 296)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst2" (rect 3 5 25 22)(font "Intel Clear" )(invisible))
+	(rect 688 248 848 328)
+	(text "pixel_pattern" (rect 93 0 155 12)(font "Arial" ))
+	(text "inst1" (rect 130 64 152 81)(font "Intel Clear" ))
 	(port
-		(pt 16 16)
+		(pt 160 32)
+		(input)
+		(text "x[9..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "x[9..0]" (rect 108 27 139 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(port
+		(pt 160 48)
+		(input)
+		(text "y[9..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "y[9..0]" (rect 106 43 139 55)(font "Arial" ))
+		(line (pt 160 48)(pt 144 48)(line_width 3))
+	)
+	(port
+		(pt 0 32)
 		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(line (pt 16 16)(pt 16 8))
+		(text "pixel_on" (rect 0 0 40 12)(font "Arial" ))
+		(text "pixel_on" (rect 14 27 54 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
 	)
 	(drawing
-		(line (pt 8 8)(pt 24 8))
+		(rectangle (rect 16 16 144 64))
 	)
+	(flipy)
 )
 (connector
 	(pt 680 120)
@@ -405,14 +420,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 872 112)
 )
 (connector
-	(pt 688 296)
-	(pt 600 296)
-)
-(connector
-	(pt 600 136)
-	(pt 600 296)
-)
-(connector
 	(pt 920 208)
 	(pt 920 232)
 )
@@ -443,6 +450,14 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 376 208)
 	(pt 376 216)
+)
+(connector
+	(pt 600 280)
+	(pt 688 280)
+)
+(connector
+	(pt 600 136)
+	(pt 600 280)
 )
 (junction (pt 376 192))
 (junction (pt 920 208))

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Face
-Mon Oct 28 14:37:44 2024
+Mon Oct 28 15:17:37 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -45,13 +45,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 28 14:37:44 2024          ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 28 15:17:37 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Face                                           ;
 ; Top-level Entity Name              ; Block1                                         ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 42                                             ;
-;     Total combinational functions  ; 42                                             ;
+; Total logic elements               ; 43                                             ;
+;     Total combinational functions  ; 43                                             ;
 ;     Dedicated logic registers      ; 20                                             ;
 ; Total registers                    ; 20                                             ;
 ; Total pins                         ; 7                                              ;
@@ -165,22 +165,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; Driver.v                         ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/Driver.v           ;         ;
-; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/Block1.bdf         ;         ;
-; TestClockDivider.v               ; yes             ; User Wizard-Generated File         ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/TestClockDivider.v ;         ;
-; TestPatternCode.v                ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/TestPatternCode.v  ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf          ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc      ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_pll.inc     ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc   ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc   ;         ;
-; db/ip_altpll.v                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/db/ip_altpll.v     ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; Driver.v                         ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/Driver.v                     ;         ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/Block1.bdf                   ;         ;
+; TestClockDivider.v               ; yes             ; User Wizard-Generated File         ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/TestClockDivider.v           ;         ;
+; colorThirds.v                    ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/colorThirds.v                ;         ;
+; output_files/pixelPattern2.v     ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/output_files/pixelPattern2.v ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf                    ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_pll.inc               ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc             ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc             ;         ;
+; db/ip_altpll.v                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/db/ip_altpll.v               ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -188,16 +189,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                     ;
 +---------------------------------------------+---------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 42                                                                        ;
+; Estimated Total logic elements              ; 43                                                                        ;
 ;                                             ;                                                                           ;
-; Total combinational functions               ; 42                                                                        ;
+; Total combinational functions               ; 43                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                           ;
-;     -- 4 input functions                    ; 11                                                                        ;
-;     -- 3 input functions                    ; 3                                                                         ;
-;     -- <=2 input functions                  ; 28                                                                        ;
+;     -- 4 input functions                    ; 14                                                                        ;
+;     -- 3 input functions                    ; 2                                                                         ;
+;     -- <=2 input functions                  ; 27                                                                        ;
 ;                                             ;                                                                           ;
 ; Logic elements by mode                      ;                                                                           ;
-;     -- normal mode                          ; 24                                                                        ;
+;     -- normal mode                          ; 25                                                                        ;
 ;     -- arithmetic mode                      ; 18                                                                        ;
 ;                                             ;                                                                           ;
 ; Total registers                             ; 20                                                                        ;
@@ -213,23 +214,23 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                           ;
 ; Maximum fan-out node                        ; ip:inst|altpll:altpll_component|ip_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 21                                                                        ;
-; Total fan-out                               ; 192                                                                       ;
-; Average fan-out                             ; 2.49                                                                      ;
+; Total fan-out                               ; 198                                                                       ;
+; Average fan-out                             ; 2.54                                                                      ;
 +---------------------------------------------+---------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                              ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name   ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
-; |Block1                             ; 42 (0)              ; 20 (0)                    ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |Block1                                                          ; Block1        ; work         ;
-;    |ip:inst|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|ip:inst                                                  ; ip            ; work         ;
-;       |altpll:altpll_component|     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|ip:inst|altpll:altpll_component                          ; altpll        ; work         ;
-;          |ip_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|ip:inst|altpll:altpll_component|ip_altpll:auto_generated ; ip_altpll     ; work         ;
-;    |pixel_pattern:inst9|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|pixel_pattern:inst9                                      ; pixel_pattern ; work         ;
-;    |vga_driver:inst7|               ; 41 (41)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|vga_driver:inst7                                         ; vga_driver    ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+---------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name  ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+--------------+
+; |Block1                             ; 43 (0)              ; 20 (0)                    ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |Block1                                                          ; Block1       ; work         ;
+;    |color_Thirds:inst4|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|color_Thirds:inst4                                       ; color_Thirds ; work         ;
+;    |ip:inst|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|ip:inst                                                  ; ip           ; work         ;
+;       |altpll:altpll_component|     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|ip:inst|altpll:altpll_component                          ; altpll       ; work         ;
+;          |ip_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|ip:inst|altpll:altpll_component|ip_altpll:auto_generated ; ip_altpll    ; work         ;
+;    |vga_driver:inst7|               ; 38 (38)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|vga_driver:inst7                                         ; vga_driver   ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -648,18 +649,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ff         ; 20                          ;
 ;     CLR               ; 10                          ;
 ;     ENA CLR           ; 10                          ;
-; cycloneiii_lcell_comb ; 44                          ;
+; cycloneiii_lcell_comb ; 46                          ;
 ;     arith             ; 18                          ;
 ;         2 data inputs ; 18                          ;
-;     normal            ; 26                          ;
+;     normal            ; 28                          ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 11                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 14                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.64                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.51                        ;
 +-----------------------+-----------------------------+
 
 
@@ -678,7 +680,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Oct 28 14:37:38 2024
+    Info: Processing started: Mon Oct 28 15:17:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Face -c Face
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -698,10 +700,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file output_
     Info (12023): Found entity 1: pixel_on_640x480 File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/output_files/DecisionMaker.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/bitmapreader.v
     Info (12023): Found entity 1: BitmapValue File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/output_files/BitMapReader.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file block2.bdf
-    Info (12023): Found entity 1: Block2
 Info (12021): Found 1 design units, including 1 entities, in source file colorthirds.v
     Info (12023): Found entity 1: color_Thirds File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/colorThirds.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/pixelpattern2.v
+    Info (12023): Found entity 1: pixel_pattern2 File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/output_files/pixelPattern2.v Line: 1
 Info (12127): Elaborating entity "Block1" for the top level hierarchy
 Info (12128): Elaborating entity "vga_driver" for hierarchy "vga_driver:inst7"
 Warning (10230): Verilog HDL assignment warning at Driver.v(35): truncated value with size 32 to match size of target (10) File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/Driver.v Line: 35
@@ -768,19 +770,22 @@ Info (12133): Instantiated megafunction "ip:inst|altpll:altpll_component" with t
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip_altpll.v
     Info (12023): Found entity 1: ip_altpll File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/0QuartusFace/db/ip_altpll.v Line: 31
 Info (12128): Elaborating entity "ip_altpll" for hierarchy "ip:inst|altpll:altpll_component|ip_altpll:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "pixel_pattern" for hierarchy "pixel_pattern:inst9"
+Info (12128): Elaborating entity "pixel_pattern2" for hierarchy "pixel_pattern2:inst1"
+Info (12128): Elaborating entity "color_Thirds" for hierarchy "color_Thirds:inst4"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Blue" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 42 logic cells
+    Info (21061): Implemented 43 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Mon Oct 28 14:37:44 2024
+    Info: Processing ended: Mon Oct 28 15:17:37 2024
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 

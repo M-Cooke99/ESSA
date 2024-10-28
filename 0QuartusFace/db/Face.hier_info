@@ -3,9 +3,9 @@ Hsync <= vga_driver:inst7.hsync
 Rst => inst3.IN0
 Clk => ip:inst.inclk0
 Vsync <= vga_driver:inst7.vsync
-Red <= vga_driver:inst7.pixel_out
-Green <= vga_driver:inst7.pixel_out
-Blue <= vga_driver:inst7.pixel_out
+Red <= color_Thirds:inst4.red_Out
+Green <= color_Thirds:inst4.green_Out
+Blue <= color_Thirds:inst4.blue_Out
 
 
 |Block1|vga_driver:inst7
@@ -156,47 +156,65 @@ inclk[1] => pll1.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|pixel_pattern:inst9
-x[0] => LessThan0.IN20
-x[0] => LessThan2.IN20
-x[1] => LessThan0.IN19
-x[1] => LessThan2.IN19
-x[2] => LessThan0.IN18
-x[2] => LessThan2.IN18
-x[3] => LessThan0.IN17
-x[3] => LessThan2.IN17
-x[4] => LessThan0.IN16
-x[4] => LessThan2.IN16
-x[5] => LessThan0.IN15
-x[5] => LessThan2.IN15
-x[6] => LessThan0.IN14
-x[6] => LessThan2.IN14
-x[7] => LessThan0.IN13
-x[7] => LessThan2.IN13
-x[8] => LessThan0.IN12
-x[8] => LessThan2.IN12
-x[9] => LessThan0.IN11
-x[9] => LessThan2.IN11
+|Block1|pixel_pattern2:inst1
+x[0] => ~NO_FANOUT~
+x[1] => ~NO_FANOUT~
+x[2] => ~NO_FANOUT~
+x[3] => ~NO_FANOUT~
+x[4] => ~NO_FANOUT~
+x[5] => ~NO_FANOUT~
+x[6] => ~NO_FANOUT~
+x[7] => ~NO_FANOUT~
+x[8] => ~NO_FANOUT~
+x[9] => ~NO_FANOUT~
+y[0] => LessThan0.IN20
+y[1] => LessThan0.IN19
+y[2] => LessThan0.IN18
+y[3] => LessThan0.IN17
+y[4] => LessThan0.IN16
+y[5] => LessThan0.IN15
+y[6] => LessThan0.IN14
+y[7] => LessThan0.IN13
+y[8] => LessThan0.IN12
+y[9] => LessThan0.IN11
+pixel_on <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|color_Thirds:inst4
+x[0] => ~NO_FANOUT~
+x[1] => ~NO_FANOUT~
+x[2] => ~NO_FANOUT~
+x[3] => ~NO_FANOUT~
+x[4] => ~NO_FANOUT~
+x[5] => ~NO_FANOUT~
+x[6] => ~NO_FANOUT~
+x[7] => ~NO_FANOUT~
+x[8] => ~NO_FANOUT~
+x[9] => ~NO_FANOUT~
+y[0] => LessThan0.IN20
 y[0] => LessThan1.IN20
-y[0] => LessThan3.IN20
+y[1] => LessThan0.IN19
 y[1] => LessThan1.IN19
-y[1] => LessThan3.IN19
+y[2] => LessThan0.IN18
 y[2] => LessThan1.IN18
-y[2] => LessThan3.IN18
+y[3] => LessThan0.IN17
 y[3] => LessThan1.IN17
-y[3] => LessThan3.IN17
+y[4] => LessThan0.IN16
 y[4] => LessThan1.IN16
-y[4] => LessThan3.IN16
+y[5] => LessThan0.IN15
 y[5] => LessThan1.IN15
-y[5] => LessThan3.IN15
+y[6] => LessThan0.IN14
 y[6] => LessThan1.IN14
-y[6] => LessThan3.IN14
+y[7] => LessThan0.IN13
 y[7] => LessThan1.IN13
-y[7] => LessThan3.IN13
+y[8] => LessThan0.IN12
 y[8] => LessThan1.IN12
-y[8] => LessThan3.IN12
+y[9] => LessThan0.IN11
 y[9] => LessThan1.IN11
-y[9] => LessThan3.IN11
-pixel_on <= always0.DB_MAX_OUTPUT_PORT_TYPE
+pixel_on => red_Out.OUTPUTSELECT
+pixel_on => green_Out.OUTPUTSELECT
+red_Out <= red_Out.DB_MAX_OUTPUT_PORT_TYPE
+green_Out <= green_Out.DB_MAX_OUTPUT_PORT_TYPE
+blue_Out <= <GND>
 
 
