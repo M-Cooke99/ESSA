@@ -172,8 +172,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 100       :        :                   :      
 Hsync                        : 101       : output : 2.5 V             :         : 6         : Y              
 VCCINT                       : 102       : power  :                   : 1.2V    :           :                
 Vsync                        : 103       : output : 2.5 V             :         : 6         : Y              
-Blue                         : 104       : output : 2.5 V             :         : 6         : Y              
-Green                        : 105       : output : 2.5 V             :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 104       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 105       :        :                   :         : 6         :                
 Red                          : 106       : output : 2.5 V             :         : 6         : Y              
 VCCA2                        : 107       : power  :                   : 2.5V    :           :                
 GNDA2                        : 108       : gnd    :                   :         :           :                
