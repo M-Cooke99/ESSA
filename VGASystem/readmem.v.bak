@@ -1,0 +1,13 @@
+module read_mem(
+	input current_vertical[0:9],
+	input current_horizontal[0:9],
+	output bit
+);
+
+	always @(*)begin
+		
+		// Get bit from x,y
+		assign bit = 0;
+		
+	end
+endmodule
