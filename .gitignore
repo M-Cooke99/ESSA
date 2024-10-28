@@ -52,5 +52,5 @@ Mkfile.old
 dkms.conf
 
 # Quartus
-0QuartusFace/db
-0QuartusFace/incremental_db
+./0QuartusFace/db/**
+./0QuartusFace/incremental_db/**
