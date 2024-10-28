@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGASystem
-Mon Oct 28 13:46:18 2024
+Mon Oct 28 13:50:06 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 28 13:46:18 2024          ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 28 13:50:06 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; VGASystem                                      ;
 ; Top-level Entity Name              ; VGASystem                                      ;
@@ -691,7 +691,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Oct 28 13:46:09 2024
+    Info: Processing started: Mon Oct 28 13:49:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGASystem -c VGASystem
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -710,6 +710,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file vgasyst
 Info (12021): Found 1 design units, including 1 entities, in source file color_thirds.v
     Info (12023): Found entity 1: color_Thirds File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/color_thirds.v Line: 1
 Info (12127): Elaborating entity "VGASystem" for the top level hierarchy
+Warning (275011): Block or symbol "vga_driver" of instance "inst" overlaps another block or symbol
 Info (12128): Elaborating entity "vga_driver" for hierarchy "vga_driver:inst"
 Warning (10230): Verilog HDL assignment warning at VGADriver.v(35): truncated value with size 32 to match size of target (10) File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGADriver.v Line: 35
 Warning (10230): Verilog HDL assignment warning at VGADriver.v(49): truncated value with size 32 to match size of target (10) File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGADriver.v Line: 49
@@ -801,10 +802,10 @@ Info (21057): Implemented 55 device resources after synthesis - the final resour
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 38 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Mon Oct 28 13:46:18 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Mon Oct 28 13:50:06 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
 
 
