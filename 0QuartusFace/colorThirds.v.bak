@@ -1,0 +1,37 @@
+module pixel_pattern(
+    input wire [9:0] x,
+    input wire [9:0] y,
+    input reg pixel_on,
+	 
+    output wire [8:0] red_Out,
+	 output wire [8:0] green_Out,
+	 output wire [8:0] blue_Out
+    );
+
+
+		
+    always @(*)
+    begin
+	 // [R,G,B]
+	 // Red    [255,51,51] 
+	 // Yellow [255,255,51]
+	 // Green  [51,255,51]
+
+	if (pixel_on) begin
+	
+		  if(y > 320)begin
+				// make output Red
+				red_Out = 255; 
+				green_Out = 51; 
+				blue_Out = 51; 
+		  end else if (y > 160) begin
+				// make output Yellow
+				red_Out = 255; green_Out = 255; blue_Out = 51; 
+		   end else begin
+				// make output Green
+				red_Out = 51; green_Out = 255; blue_Out = 51;
+			end
+		    
+   end
+
+endmodule

@@ -1,0 +1,49 @@
+module array_shift_128x120(
+    input wire clk,             // System clock
+    input wire rst_n,           // Active-low reset
+    input wire [6:0] y_in,      // Input integer specifying the y-coordinate
+    input wire shift_enable,    // Shift enable signal
+    output reg [127:0] y_out    // Outputs the values of the x coordinates for the given y
+);
+
+    // Declare a 128x120 array, each element is 1-bit wide
+    reg pixel_data[0:119][0:127];
+    
+    integer i, j;
+
+    // Sequential logic to shift the array and insert the new value
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            // Reset the array (set all to 0)
+            for (i = 0; i < 120; i = i + 1) begin
+                for (j = 0; j < 128; j = j + 1) begin
+                    pixel_data[i][j] <= 0;
+                end
+            end
+        end
+        else if (shift_enable) begin
+            // Shift the x coordinates for all rows and insert new value
+            for (i = 0; i < 120; i = i + 1) begin
+                // Shift the row to the right (x-coordinate shift)
+                for (j = 127; j > 0; j = j - 1) begin
+                    pixel_data[i][j] <= pixel_data[i][j-1];  // Shift right
+                end
+                // Insert '1' at the new (0, y_in) coordinate
+                if (i == y_in) begin
+                    pixel_data[i][0] <= 1;
+                end
+                else begin
+                    pixel_data[i][0] <= 0;  // Set the first x-coordinate to 0 for other rows
+                end
+            end
+        end
+    end
+
+    // Output the values of the entire x-row at the given y-coordinate
+    always @(*) begin
+        for (i = 0; i < 128; i = i + 1) begin
+            y_out[i] = pixel_data[y_in][i];
+        end
+    end
+
+endmodule

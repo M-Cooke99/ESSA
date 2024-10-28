@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Hsync",
+					"strict" : false
+				},
+				{
+					"name" : "Red",
+					"strict" : false
+				},
+				{
+					"name" : "Rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

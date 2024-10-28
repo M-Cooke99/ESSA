@@ -1,0 +1,1193 @@
+Timing Analyzer report for Face
+Mon Oct 28 14:11:45 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'inst|altpll_component|auto_generated|pll1|clk[0]'
+ 13. Slow 1200mV 85C Model Hold: 'inst|altpll_component|auto_generated|pll1|clk[0]'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'inst|altpll_component|auto_generated|pll1|clk[0]'
+ 22. Slow 1200mV 0C Model Hold: 'inst|altpll_component|auto_generated|pll1|clk[0]'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'inst|altpll_component|auto_generated|pll1|clk[0]'
+ 30. Fast 1200mV 0C Model Hold: 'inst|altpll_component|auto_generated|pll1|clk[0]'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; Face                                                   ;
+; Device Family         ; Cyclone IV E                                           ;
+; Device Name           ; EP4CE6E22C8                                            ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Combined                                               ;
+; Rise/Fall Delays      ; Enabled                                                ;
++-----------------------+--------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 10          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-10        ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                                              ;
++--------------------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+----------------------------------------------------+------------------------------------------------------+
+; Clock Name                                       ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                                             ; Targets                                              ;
++--------------------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+----------------------------------------------------+------------------------------------------------------+
+; Clk                                              ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                                    ; { Clk }                                              ;
+; inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; 40.000 ; 25.0 MHz  ; 0.000 ; 20.000 ; 50.00      ; 2         ; 1           ;       ;        ;           ;            ; false    ; Clk    ; inst|altpll_component|auto_generated|pll1|inclk[0] ; { inst|altpll_component|auto_generated|pll1|clk[0] } ;
++--------------------------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+----------------------------------------------------+------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                     ;
++------------+-----------------+--------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                       ; Note ;
++------------+-----------------+--------------------------------------------------+------+
+; 241.02 MHz ; 241.02 MHz      ; inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
++------------+-----------------+--------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++---------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                       ;
++--------------------------------------------------+--------+---------------+
+; Clock                                            ; Slack  ; End Point TNS ;
++--------------------------------------------------+--------+---------------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 35.851 ; 0.000         ;
++--------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                       ;
++--------------------------------------------------+-------+---------------+
+; Clock                                            ; Slack ; End Point TNS ;
++--------------------------------------------------+-------+---------------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.744 ; 0.000         ;
++--------------------------------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                         ;
++--------------------------------------------------+--------+---------------+
+; Clock                                            ; Slack  ; End Point TNS ;
++--------------------------------------------------+--------+---------------+
+; Clk                                              ; 9.934  ; 0.000         ;
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 19.718 ; 0.000         ;
++--------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'inst|altpll_component|auto_generated|pll1|clk[0]'                                                                                                                                   ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                                     ; Latch Clock                                      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; 35.851 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 4.069      ;
+; 35.851 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 4.069      ;
+; 35.851 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 4.069      ;
+; 35.905 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 4.015      ;
+; 35.905 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 4.015      ;
+; 35.905 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 4.015      ;
+; 36.125 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.795      ;
+; 36.125 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.795      ;
+; 36.125 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.795      ;
+; 36.163 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.757      ;
+; 36.217 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.703      ;
+; 36.219 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.701      ;
+; 36.219 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.701      ;
+; 36.219 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.701      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.326 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.590      ;
+; 36.437 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.483      ;
+; 36.531 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.389      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.573 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.343      ;
+; 36.628 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.292      ;
+; 36.628 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.292      ;
+; 36.628 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.292      ;
+; 36.632 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.288      ;
+; 36.632 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.288      ;
+; 36.632 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.288      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.673 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.243      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.708 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.208      ;
+; 36.766 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.154      ;
+; 36.782 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.138      ;
+; 36.782 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.138      ;
+; 36.782 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.138      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.810 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.106      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.841 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 3.075      ;
+; 36.862 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.058      ;
+; 36.910 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 3.010      ;
+; 36.934 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 2.986      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.935 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.085     ; 2.981      ;
+; 36.940 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.081     ; 2.980      ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'inst|altpll_component|auto_generated|pll1|clk[0]'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                                     ; Latch Clock                                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; 0.744 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.037      ;
+; 0.746 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.039      ;
+; 0.746 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.039      ;
+; 0.752 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.045      ;
+; 0.763 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.056      ;
+; 0.764 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.057      ;
+; 0.770 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.063      ;
+; 0.770 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.063      ;
+; 0.773 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.066      ;
+; 0.774 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.067      ;
+; 0.774 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.067      ;
+; 0.902 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.195      ;
+; 1.068 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.361      ;
+; 1.099 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.392      ;
+; 1.100 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.393      ;
+; 1.107 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.400      ;
+; 1.108 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.401      ;
+; 1.116 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.409      ;
+; 1.117 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.410      ;
+; 1.125 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.418      ;
+; 1.126 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.419      ;
+; 1.134 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.427      ;
+; 1.135 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.428      ;
+; 1.143 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.436      ;
+; 1.144 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.437      ;
+; 1.159 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.452      ;
+; 1.172 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.465      ;
+; 1.172 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.465      ;
+; 1.172 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.465      ;
+; 1.172 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.465      ;
+; 1.173 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.466      ;
+; 1.173 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.466      ;
+; 1.173 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.466      ;
+; 1.230 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.523      ;
+; 1.239 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.532      ;
+; 1.240 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.533      ;
+; 1.247 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.540      ;
+; 1.248 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.541      ;
+; 1.248 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.541      ;
+; 1.256 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.549      ;
+; 1.257 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.550      ;
+; 1.257 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.550      ;
+; 1.257 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.550      ;
+; 1.257 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.550      ;
+; 1.266 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.559      ;
+; 1.266 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.559      ;
+; 1.274 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.567      ;
+; 1.275 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.568      ;
+; 1.283 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.576      ;
+; 1.311 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.604      ;
+; 1.326 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.619      ;
+; 1.357 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.650      ;
+; 1.357 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.650      ;
+; 1.357 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.650      ;
+; 1.371 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.664      ;
+; 1.378 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.671      ;
+; 1.379 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.672      ;
+; 1.387 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.680      ;
+; 1.387 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.680      ;
+; 1.397 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.690      ;
+; 1.397 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.690      ;
+; 1.397 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.690      ;
+; 1.406 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.699      ;
+; 1.406 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.699      ;
+; 1.444 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.737      ;
+; 1.460 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.753      ;
+; 1.464 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.757      ;
+; 1.466 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.759      ;
+; 1.472 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.765      ;
+; 1.472 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.765      ;
+; 1.472 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.765      ;
+; 1.499 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.792      ;
+; 1.506 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.799      ;
+; 1.510 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.803      ;
+; 1.518 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.811      ;
+; 1.525 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.818      ;
+; 1.525 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.818      ;
+; 1.525 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.818      ;
+; 1.527 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.820      ;
+; 1.528 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.821      ;
+; 1.537 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.830      ;
+; 1.546 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.839      ;
+; 1.572 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.865      ;
+; 1.572 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.865      ;
+; 1.584 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.877      ;
+; 1.592 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.885      ;
+; 1.592 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.885      ;
+; 1.592 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.885      ;
+; 1.606 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.899      ;
+; 1.618 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.911      ;
+; 1.630 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.923      ;
+; 1.637 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.930      ;
+; 1.647 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.081      ; 1.940      ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                      ;
++------------+-----------------+--------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                       ; Note ;
++------------+-----------------+--------------------------------------------------+------+
+; 259.61 MHz ; 259.61 MHz      ; inst|altpll_component|auto_generated|pll1|clk[0] ;      ;
++------------+-----------------+--------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                        ;
++--------------------------------------------------+--------+---------------+
+; Clock                                            ; Slack  ; End Point TNS ;
++--------------------------------------------------+--------+---------------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 36.148 ; 0.000         ;
++--------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                        ;
++--------------------------------------------------+-------+---------------+
+; Clock                                            ; Slack ; End Point TNS ;
++--------------------------------------------------+-------+---------------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.694 ; 0.000         ;
++--------------------------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                          ;
++--------------------------------------------------+--------+---------------+
+; Clock                                            ; Slack  ; End Point TNS ;
++--------------------------------------------------+--------+---------------+
+; Clk                                              ; 9.943  ; 0.000         ;
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 19.717 ; 0.000         ;
++--------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'inst|altpll_component|auto_generated|pll1|clk[0]'                                                                                                                                    ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                                     ; Latch Clock                                      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; 36.148 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.781      ;
+; 36.148 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.781      ;
+; 36.148 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.781      ;
+; 36.195 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.734      ;
+; 36.195 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.734      ;
+; 36.195 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.734      ;
+; 36.378 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.551      ;
+; 36.378 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.551      ;
+; 36.378 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.551      ;
+; 36.436 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.493      ;
+; 36.469 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.460      ;
+; 36.469 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.460      ;
+; 36.469 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.460      ;
+; 36.483 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.446      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.536 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.393      ;
+; 36.666 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.263      ;
+; 36.757 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.172      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.803 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.126      ;
+; 36.840 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.089      ;
+; 36.840 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.089      ;
+; 36.840 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.089      ;
+; 36.844 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.085      ;
+; 36.844 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.085      ;
+; 36.844 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.085      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.908 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.021      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.926 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 3.003      ;
+; 36.969 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.960      ;
+; 36.969 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.960      ;
+; 36.969 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.960      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 36.995 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.934      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.053 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.876      ;
+; 37.088 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.072     ; 2.842      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.118 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.811      ;
+; 37.126 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.803      ;
+; 37.126 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.803      ;
+; 37.126 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.803      ;
+; 37.128 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.073     ; 2.801      ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'inst|altpll_component|auto_generated|pll1|clk[0]'                                                                                                                                    ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                                     ; Latch Clock                                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; 0.694 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 0.961      ;
+; 0.695 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 0.962      ;
+; 0.696 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 0.963      ;
+; 0.702 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 0.970      ;
+; 0.707 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 0.975      ;
+; 0.708 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 0.976      ;
+; 0.714 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 0.981      ;
+; 0.719 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 0.987      ;
+; 0.719 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 0.986      ;
+; 0.719 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 0.986      ;
+; 0.722 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 0.989      ;
+; 0.822 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.090      ;
+; 0.978 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.245      ;
+; 1.014 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.281      ;
+; 1.016 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.283      ;
+; 1.017 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.284      ;
+; 1.020 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.287      ;
+; 1.024 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.292      ;
+; 1.026 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.294      ;
+; 1.029 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.296      ;
+; 1.032 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.300      ;
+; 1.032 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.300      ;
+; 1.032 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.299      ;
+; 1.038 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.306      ;
+; 1.038 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.305      ;
+; 1.039 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.307      ;
+; 1.041 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.309      ;
+; 1.042 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.309      ;
+; 1.053 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.321      ;
+; 1.053 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.320      ;
+; 1.071 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.339      ;
+; 1.084 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.352      ;
+; 1.090 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.357      ;
+; 1.090 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.357      ;
+; 1.090 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.357      ;
+; 1.093 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.360      ;
+; 1.093 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.360      ;
+; 1.093 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.360      ;
+; 1.112 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.379      ;
+; 1.127 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.395      ;
+; 1.137 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.405      ;
+; 1.138 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.405      ;
+; 1.139 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.406      ;
+; 1.141 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.408      ;
+; 1.142 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.409      ;
+; 1.146 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.414      ;
+; 1.151 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.418      ;
+; 1.154 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.422      ;
+; 1.154 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.421      ;
+; 1.160 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.428      ;
+; 1.160 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.427      ;
+; 1.161 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.429      ;
+; 1.161 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.429      ;
+; 1.169 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.437      ;
+; 1.175 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.443      ;
+; 1.238 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.505      ;
+; 1.245 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.513      ;
+; 1.246 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.514      ;
+; 1.258 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.525      ;
+; 1.259 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.527      ;
+; 1.260 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.527      ;
+; 1.266 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.533      ;
+; 1.266 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.533      ;
+; 1.266 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.533      ;
+; 1.268 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.536      ;
+; 1.268 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.536      ;
+; 1.276 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.543      ;
+; 1.283 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.551      ;
+; 1.283 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.551      ;
+; 1.287 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.555      ;
+; 1.354 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.622      ;
+; 1.356 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.623      ;
+; 1.362 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.629      ;
+; 1.367 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.634      ;
+; 1.367 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.635      ;
+; 1.368 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.636      ;
+; 1.370 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.638      ;
+; 1.380 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.647      ;
+; 1.380 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.647      ;
+; 1.380 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.647      ;
+; 1.383 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.650      ;
+; 1.390 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.658      ;
+; 1.390 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.658      ;
+; 1.395 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.662      ;
+; 1.395 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.662      ;
+; 1.395 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.662      ;
+; 1.396 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.664      ;
+; 1.396 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.664      ;
+; 1.405 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.673      ;
+; 1.409 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.677      ;
+; 1.473 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.741      ;
+; 1.483 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.751      ;
+; 1.486 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.753      ;
+; 1.486 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.753      ;
+; 1.486 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.072      ; 1.753      ;
+; 1.488 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.756      ;
+; 1.489 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.757      ;
+; 1.492 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.073      ; 1.760      ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                        ;
++--------------------------------------------------+--------+---------------+
+; Clock                                            ; Slack  ; End Point TNS ;
++--------------------------------------------------+--------+---------------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 38.221 ; 0.000         ;
++--------------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                        ;
++--------------------------------------------------+-------+---------------+
+; Clock                                            ; Slack ; End Point TNS ;
++--------------------------------------------------+-------+---------------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.298 ; 0.000         ;
++--------------------------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                          ;
++--------------------------------------------------+--------+---------------+
+; Clock                                            ; Slack  ; End Point TNS ;
++--------------------------------------------------+--------+---------------+
+; Clk                                              ; 9.594  ; 0.000         ;
+; inst|altpll_component|auto_generated|pll1|clk[0] ; 19.797 ; 0.000         ;
++--------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'inst|altpll_component|auto_generated|pll1|clk[0]'                                                                                                                                    ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                                     ; Latch Clock                                      ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; 38.221 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.730      ;
+; 38.221 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.730      ;
+; 38.221 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.730      ;
+; 38.236 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.715      ;
+; 38.236 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.715      ;
+; 38.236 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.715      ;
+; 38.330 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.621      ;
+; 38.330 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.621      ;
+; 38.330 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.621      ;
+; 38.359 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.592      ;
+; 38.374 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.577      ;
+; 38.379 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.572      ;
+; 38.379 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.572      ;
+; 38.379 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.572      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.391 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.560      ;
+; 38.468 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.483      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.482 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.469      ;
+; 38.517 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.434      ;
+; 38.577 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.037     ; 1.373      ;
+; 38.587 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.364      ;
+; 38.587 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.364      ;
+; 38.587 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.364      ;
+; 38.595 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.356      ;
+; 38.595 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.356      ;
+; 38.595 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.356      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.617 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.334      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.619 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.332      ;
+; 38.622 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.037     ; 1.328      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.634 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.317      ;
+; 38.641 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.037     ; 1.309      ;
+; 38.652 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.299      ;
+; 38.652 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.299      ;
+; 38.652 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.299      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.667 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.284      ;
+; 38.668 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.037     ; 1.282      ;
+; 38.668 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.283      ;
+; 38.668 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.283      ;
+; 38.668 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.283      ;
+; 38.680 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.037     ; 1.270      ;
+; 38.691 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.260      ;
+; 38.691 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.260      ;
+; 38.691 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.260      ;
+; 38.691 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.260      ;
+; 38.691 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.260      ;
+; 38.691 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.260      ;
+; 38.691 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 40.000       ; -0.036     ; 1.260      ;
++--------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'inst|altpll_component|auto_generated|pll1|clk[0]'                                                                                                                                    ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                                     ; Latch Clock                                      ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+; 0.298 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.419      ;
+; 0.298 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.419      ;
+; 0.298 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.419      ;
+; 0.304 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.424      ;
+; 0.306 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.426      ;
+; 0.309 ; vga_driver:inst7|h_count[7] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.430      ;
+; 0.310 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.431      ;
+; 0.311 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.432      ;
+; 0.311 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.432      ;
+; 0.312 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.432      ;
+; 0.367 ; vga_driver:inst7|v_count[9] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.487      ;
+; 0.421 ; vga_driver:inst7|h_count[9] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.542      ;
+; 0.447 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.568      ;
+; 0.447 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.568      ;
+; 0.455 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.575      ;
+; 0.456 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.577      ;
+; 0.458 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.579      ;
+; 0.459 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.580      ;
+; 0.461 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.582      ;
+; 0.461 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.581      ;
+; 0.461 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.582      ;
+; 0.464 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[1] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.584      ;
+; 0.465 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.585      ;
+; 0.467 ; vga_driver:inst7|v_count[6] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.587      ;
+; 0.469 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.590      ;
+; 0.470 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.590      ;
+; 0.471 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.592      ;
+; 0.473 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.593      ;
+; 0.475 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.596      ;
+; 0.475 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.596      ;
+; 0.475 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.596      ;
+; 0.476 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.597      ;
+; 0.476 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.597      ;
+; 0.476 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.597      ;
+; 0.478 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.598      ;
+; 0.510 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.631      ;
+; 0.513 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.633      ;
+; 0.513 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.634      ;
+; 0.513 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.634      ;
+; 0.518 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.638      ;
+; 0.519 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.639      ;
+; 0.521 ; vga_driver:inst7|v_count[5] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.641      ;
+; 0.524 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.645      ;
+; 0.524 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.644      ;
+; 0.524 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.645      ;
+; 0.525 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.646      ;
+; 0.527 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.647      ;
+; 0.527 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.648      ;
+; 0.533 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.653      ;
+; 0.534 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.655      ;
+; 0.536 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.656      ;
+; 0.537 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[4] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.657      ;
+; 0.539 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.660      ;
+; 0.539 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.660      ;
+; 0.539 ; vga_driver:inst7|h_count[4] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.660      ;
+; 0.539 ; vga_driver:inst7|v_count[4] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.659      ;
+; 0.576 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.697      ;
+; 0.579 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.700      ;
+; 0.581 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.701      ;
+; 0.582 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.702      ;
+; 0.585 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.705      ;
+; 0.587 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.708      ;
+; 0.587 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.708      ;
+; 0.587 ; vga_driver:inst7|h_count[3] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.708      ;
+; 0.588 ; vga_driver:inst7|h_count[5] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.709      ;
+; 0.588 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.709      ;
+; 0.590 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.710      ;
+; 0.590 ; vga_driver:inst7|h_count[8] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.711      ;
+; 0.593 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.713      ;
+; 0.593 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.714      ;
+; 0.596 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.716      ;
+; 0.599 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.719      ;
+; 0.600 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.720      ;
+; 0.603 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[6] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.723      ;
+; 0.618 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.738      ;
+; 0.618 ; vga_driver:inst7|v_count[3] ; vga_driver:inst7|v_count[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.738      ;
+; 0.619 ; vga_driver:inst7|v_count[8] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.739      ;
+; 0.637 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.758      ;
+; 0.637 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.758      ;
+; 0.637 ; vga_driver:inst7|h_count[2] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.758      ;
+; 0.640 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[5] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.761      ;
+; 0.640 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.761      ;
+; 0.640 ; vga_driver:inst7|h_count[6] ; vga_driver:inst7|h_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.761      ;
+; 0.642 ; vga_driver:inst7|h_count[1] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.763      ;
+; 0.648 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.768      ;
+; 0.651 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.771      ;
+; 0.656 ; vga_driver:inst7|h_count[0] ; vga_driver:inst7|h_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.037      ; 0.777      ;
+; 0.662 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.782      ;
+; 0.665 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.785      ;
+; 0.666 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.786      ;
+; 0.666 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[7] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.786      ;
+; 0.669 ; vga_driver:inst7|v_count[1] ; vga_driver:inst7|v_count[3] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.789      ;
+; 0.669 ; vga_driver:inst7|v_count[2] ; vga_driver:inst7|v_count[8] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.789      ;
+; 0.673 ; vga_driver:inst7|v_count[7] ; vga_driver:inst7|v_count[9] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.793      ;
+; 0.680 ; vga_driver:inst7|v_count[0] ; vga_driver:inst7|v_count[2] ; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000        ; 0.036      ; 0.800      ;
++-------+-----------------------------+-----------------------------+--------------------------------------------------+--------------------------------------------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                           ;
++---------------------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                                             ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                                  ; 35.851 ; 0.298 ; N/A      ; N/A     ; 9.594               ;
+;  Clk                                              ; N/A    ; N/A   ; N/A      ; N/A     ; 9.594               ;
+;  inst|altpll_component|auto_generated|pll1|clk[0] ; 35.851 ; 0.298 ; N/A      ; N/A     ; 19.717              ;
+; Design-wide TNS                                   ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  Clk                                              ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  inst|altpll_component|auto_generated|pll1|clk[0] ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++---------------------------------------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Hsync         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Vsync         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Red           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Green         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Blue          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; Rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Hsync         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; Vsync         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; Red           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; Green         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Blue          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Hsync         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; Vsync         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; Red           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; Green         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Blue          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Hsync         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Vsync         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Red           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; Green         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Blue          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                 ;
++--------------------------------------------------+--------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                       ; To Clock                                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------------------+--------------------------------------------------+----------+----------+----------+----------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 280      ; 0        ; 0        ; 0        ;
++--------------------------------------------------+--------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                  ;
++--------------------------------------------------+--------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                       ; To Clock                                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------------------+--------------------------------------------------+----------+----------+----------+----------+
+; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; 280      ; 0        ; 0        ; 0        ;
++--------------------------------------------------+--------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 20    ; 20   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 20    ; 20   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                          ;
++--------------------------------------------------+--------------------------------------------------+-----------+-------------+
+; Target                                           ; Clock                                            ; Type      ; Status      ;
++--------------------------------------------------+--------------------------------------------------+-----------+-------------+
+; Clk                                              ; Clk                                              ; Base      ; Constrained ;
+; inst|altpll_component|auto_generated|pll1|clk[0] ; inst|altpll_component|auto_generated|pll1|clk[0] ; Generated ; Constrained ;
++--------------------------------------------------+--------------------------------------------------+-----------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Red         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; Rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; Hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Red         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Mon Oct 28 14:11:44 2024
+Info: Command: quartus_sta Face -c Face
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Face.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name Clk Clk
+    Info (332110): create_generated_clock -source {inst|altpll_component|auto_generated|pll1|inclk[0]} -divide_by 2 -duty_cycle 50.00 -name {inst|altpll_component|auto_generated|pll1|clk[0]} {inst|altpll_component|auto_generated|pll1|clk[0]}
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 35.851
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    35.851               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is 0.744
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.744               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.934
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.934               0.000 Clk 
+    Info (332119):    19.718               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 36.148
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    36.148               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is 0.694
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.694               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.943
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.943               0.000 Clk 
+    Info (332119):    19.717               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 38.221
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    38.221               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332146): Worst-case hold slack is 0.298
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.298               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.594
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.594               0.000 Clk 
+    Info (332119):    19.797               0.000 inst|altpll_component|auto_generated|pll1|clk[0] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Mon Oct 28 14:11:45 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
