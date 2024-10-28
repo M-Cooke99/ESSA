@@ -1,5 +1,0 @@
-Due to the discontinuation of flash as of 30th of December 2020 embedding video into .pdf files now relies on the host operating system to run the playback with specific workarounds required for windows 10.
-
-Additionally, the use of hyperref for internal links only works on UNIX compliant operating systems and has permissions issues on mac as of the BigSur update, but I have left them in this format as there is no harm in doing so, and they should work on Linux.
-
-As a result of all this, currently the proof will have to be opened manually and has been included in the ZIP submission under the "QuartusFiles" and "SupportingVideo" folders.
