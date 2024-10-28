@@ -1,0 +1,160 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 17:01:42  September 21, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FPGA_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY FPGA
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:01:42  SEPTEMBER 21, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_location_assignment PIN_23 -to Clock
+set_location_assignment PIN_133 -to display1
+set_location_assignment PIN_135 -to display2
+set_location_assignment PIN_136 -to display3
+set_location_assignment PIN_137 -to display4
+set_location_assignment PIN_128 -to segA
+set_location_assignment PIN_121 -to segB
+set_location_assignment PIN_125 -to segC
+set_location_assignment PIN_129 -to segD
+set_location_assignment PIN_132 -to segE
+set_location_assignment PIN_126 -to segF
+set_location_assignment PIN_124 -to segG
+set_location_assignment PIN_91 -to b0
+set_location_assignment PIN_90 -to b1
+set_location_assignment PIN_89 -to b2
+set_location_assignment PIN_88 -to b3
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE Sequencer.bdf
+set_global_assignment -name BDF_FILE Sept4x1Mutiplexer.bdf
+set_global_assignment -name BDF_FILE PositiveEdgeTriggeredFlipFlop.bdf
+set_global_assignment -name BDF_FILE "MUX6-1.bdf"
+set_global_assignment -name BDF_FILE "MUX4-1.bdf"
+set_global_assignment -name BDF_FILE MultiFrequency.bdf
+set_global_assignment -name BDF_FILE "MuliplexerQuad4-1.bdf"
+set_global_assignment -name BDF_FILE "Muliplexer6x6-1.bdf"
+set_global_assignment -name BDF_FILE HexToSSD.bdf
+set_global_assignment -name BDF_FILE FourDigitSSD.bdf
+set_global_assignment -name BDF_FILE Decoder3to6.bdf
+set_global_assignment -name BDF_FILE Decoder2to4.bdf
+set_global_assignment -name BDF_FILE Debouncer.bdf
+set_global_assignment -name BDF_FILE ClockedSRlatch.bdf
+set_global_assignment -name BDF_FILE BCDinputs.bdf
+set_global_assignment -name BDF_FILE BCDCounter.bdf
+set_global_assignment -name BDF_FILE BCDClockedCounterBus.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE HexToSSDwaveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name BDF_FILE FPGA.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/WaveformMUX.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform2.vwf
+set_global_assignment -name BDF_FILE FrequencyDividerHL.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform3.vwf
+set_global_assignment -name BDF_FILE HexToSSDBus.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform5.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform6.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform7.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform10.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform11.vwf
+set_global_assignment -name BDF_FILE RippleClockedCounterBus.bdf
+set_global_assignment -name BDF_FILE HexToSSDTopLevel.bdf
+set_global_assignment -name BDF_FILE Decoder3to8.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform13.vwf
+set_global_assignment -name BDF_FILE DigitShifter.bdf
+set_global_assignment -name BDF_FILE FPGALPM.bdf
+set_global_assignment -name BDF_FILE RecongniserLogic.bdf
+set_global_assignment -name BDF_FILE CounterWithPassword.bdf
+set_global_assignment -name BDF_FILE CounterSelecter.bdf
+set_global_assignment -name BDF_FILE DigMux.bdf
+set_global_assignment -name BDF_FILE StateHolder.bdf
+set_global_assignment -name BDF_FILE TFlipFlop.bdf
+set_global_assignment -name BDF_FILE Pass.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform14.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform15.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform16.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform17.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform18.vwf
+set_global_assignment -name BDF_FILE Test.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform19.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform20.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform21.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform22.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform23.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform24.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform25.vwf
+set_global_assignment -name VERILOG_FILE RecongniserLogicVerilog.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform26.vwf
+set_global_assignment -name BDF_FILE EdgeDetector.bdf
+set_global_assignment -name BDF_FILE QuadEdgeTrigger.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform27.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform28.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform29.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform30.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform31.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform32.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform33.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform34.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform35.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform36.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform37.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform38.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform39.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform40.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform41.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform42.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform43.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform44.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform45.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform46.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform47.vwf
+set_global_assignment -name SOURCE_FILE db/FPGA.cmp.rdb
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform48.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

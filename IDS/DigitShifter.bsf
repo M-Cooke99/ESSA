@@ -1,0 +1,93 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 176 144)
+	(text "DigitShifter" (rect 5 0 73 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Sel[1..0]" (rect 0 0 49 19)(font "Intel Clear" (font_size 8)))
+		(text "Sel[1..0]" (rect 21 27 70 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "In0[6..0]" (rect 0 0 49 19)(font "Intel Clear" (font_size 8)))
+		(text "In0[6..0]" (rect 21 43 70 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "In1[6..0]" (rect 0 0 49 19)(font "Intel Clear" (font_size 8)))
+		(text "In1[6..0]" (rect 21 59 70 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "In2[6..0]" (rect 0 0 49 19)(font "Intel Clear" (font_size 8)))
+		(text "In2[6..0]" (rect 21 75 70 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "In3[6..0]" (rect 0 0 49 19)(font "Intel Clear" (font_size 8)))
+		(text "In3[6..0]" (rect 21 91 70 110)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "Out0[6..0]" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
+		(text "Out0[6..0]" (rect 79 27 139 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "Out1[6..0]" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
+		(text "Out1[6..0]" (rect 79 43 139 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 48)(pt 144 48)(line_width 3))
+	)
+	(port
+		(pt 160 64)
+		(output)
+		(text "Out2[6..0]" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
+		(text "Out2[6..0]" (rect 79 59 139 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 64)(pt 144 64)(line_width 3))
+	)
+	(port
+		(pt 160 80)
+		(output)
+		(text "Out3[6..0]" (rect 0 0 60 19)(font "Intel Clear" (font_size 8)))
+		(text "Out3[6..0]" (rect 79 75 139 94)(font "Intel Clear" (font_size 8)))
+		(line (pt 160 80)(pt 144 80)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 112))
+	)
+)

@@ -1,0 +1,850 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sc2co/Desktop/13244785/simulation/qsim
+vBCDClockedCounterBus
+Z1 !s110 1635056043
+!i10b 1
+!s100 7RbkDm`;UjfH[]ToaZo3C2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IHDhEO@QWh`4WZ62@PVd;M0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1635056041
+Z4 8FPGA.vo
+Z5 FFPGA.vo
+!i122 110
+L0 32 1112
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1635056042.000000
+Z7 !s107 FPGA.vo|
+Z8 !s90 -work|work|FPGA.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+n@b@c@d@clocked@counter@bus
+vBCDClockedCounterBus_vlg_vec_tst
+R1
+!i10b 1
+!s100 Ian4>e[jVnY7V:9BX<GBi3
+R2
+I1JQm<_M;8h:STEgEfN;Ni0
+R3
+R0
+w1635056040
+8output_files/Waveform6.vwf.vt
+Foutput_files/Waveform6.vwf.vt
+!i122 111
+Z11 L0 30 40
+R6
+r1
+!s85 0
+31
+!s108 1635056043.000000
+!s107 output_files/Waveform6.vwf.vt|
+!s90 -work|work|output_files/Waveform6.vwf.vt|
+!i113 1
+R9
+R10
+n@b@c@d@clocked@counter@bus_vlg_vec_tst
+vCounterSelecter
+Z12 !s110 1635302317
+!i10b 1
+!s100 lbDAUF?SmoeL;^UCaN<Ik0
+R2
+I60R]J@ChzN8VgBdb1j;AI1
+R3
+R0
+w1635302316
+R4
+R5
+!i122 244
+L0 32 2416
+R6
+r1
+!s85 0
+31
+!s108 1635302316.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@counter@selecter
+vCounterSelecter_vlg_vec_tst
+R12
+!i10b 1
+!s100 EOKNTSbmCc[3DnfUMRSgn0
+R2
+IWa2><Z@8>RZAgKo21njdW2
+R3
+R0
+w1635302315
+8output_files/Waveform31.vwf.vt
+Foutput_files/Waveform31.vwf.vt
+!i122 245
+L0 30 66
+R6
+r1
+!s85 0
+31
+!s108 1635302317.000000
+!s107 output_files/Waveform31.vwf.vt|
+!s90 -work|work|output_files/Waveform31.vwf.vt|
+!i113 1
+R9
+R10
+n@counter@selecter_vlg_vec_tst
+vCounterWithPassword
+!s110 1635375299
+!i10b 1
+!s100 @biLlUToTd64kzoO5DjSE0
+R2
+I:W77cmJQUnf?RcmZ`lAf82
+R3
+R0
+w1635375298
+R4
+R5
+!i122 342
+L0 32 2986
+R6
+r1
+!s85 0
+31
+Z13 !s108 1635375299.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@counter@with@password
+vCounterWithPassword_vlg_vec_tst
+!s110 1635375300
+!i10b 1
+!s100 1QSR]5QJ5[Y;3c[lTYoHe0
+R2
+I_=eHKN14WL9oKhFPiZKNc0
+R3
+R0
+w1635375297
+8output_files/Waveform44.vwf.vt
+Foutput_files/Waveform44.vwf.vt
+!i122 343
+L0 30 82
+R6
+r1
+!s85 0
+31
+R13
+!s107 output_files/Waveform44.vwf.vt|
+!s90 -work|work|output_files/Waveform44.vwf.vt|
+!i113 1
+R9
+R10
+n@counter@with@password_vlg_vec_tst
+vDecoder3to8
+Z14 !s110 1635214643
+!i10b 1
+!s100 5Ye^W@ll6DU`F[4B:h[f:0
+R2
+I[=1k@4^4f^Y^QFz3Q568a1
+R3
+R0
+w1635214642
+R4
+R5
+!i122 124
+L0 32 362
+R6
+r1
+!s85 0
+31
+Z15 !s108 1635214643.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@decoder3to8
+vDecoder3to8_vlg_vec_tst
+R14
+!i10b 1
+!s100 =8aHDb9a5MEhKFCfeaijM3
+R2
+I`[@G:i_3g31FCEZJDVVUF1
+R3
+R0
+w1635214641
+8output_files/Waveform13.vwf.vt
+Foutput_files/Waveform13.vwf.vt
+!i122 125
+L0 30 64
+R6
+r1
+!s85 0
+31
+R15
+!s107 output_files/Waveform13.vwf.vt|
+!s90 -work|work|output_files/Waveform13.vwf.vt|
+!i113 1
+R9
+R10
+n@decoder3to8_vlg_vec_tst
+vDigMux
+Z16 !s110 1635301918
+!i10b 1
+!s100 3oMa]m`Bk7`20@DAGIcEi3
+R2
+I;b0kUUmn6OX^DY4IZB`W22
+R3
+R0
+w1635301917
+R4
+R5
+!i122 242
+L0 32 292
+R6
+r1
+!s85 0
+31
+Z17 !s108 1635301918.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@dig@mux
+vDigMux_vlg_vec_tst
+R16
+!i10b 1
+!s100 EYff;b96Tm1]=ADFFY`W?1
+R2
+I64Q3OMc>?;H[5kVED52B:0
+R3
+R0
+w1635301916
+8output_files/Waveform30.vwf.vt
+Foutput_files/Waveform30.vwf.vt
+!i122 243
+Z18 L0 30 76
+R6
+r1
+!s85 0
+31
+R17
+!s107 output_files/Waveform30.vwf.vt|
+!s90 -work|work|output_files/Waveform30.vwf.vt|
+!i113 1
+R9
+R10
+n@dig@mux_vlg_vec_tst
+vEdgeDetector
+Z19 !s110 1635373334
+!i10b 1
+!s100 BB8H]R0JBZ^FCmgiDWYXL2
+R2
+I2k96S7oWo4Ho_d[7c>l^>0
+R3
+R0
+w1635373332
+R4
+R5
+!i122 320
+L0 32 107
+R6
+r1
+!s85 0
+31
+!s108 1635373333.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@edge@detector
+vEdgeDetector_vlg_vec_tst
+R19
+!i10b 1
+!s100 fDIkiC8h9Ld;MgJRff3mC3
+R2
+IiSEXXJRb52o:9Z<kMzE;I3
+R3
+R0
+w1635373331
+8output_files/Waveform43.vwf.vt
+Foutput_files/Waveform43.vwf.vt
+!i122 321
+L0 30 46
+R6
+r1
+!s85 0
+31
+!s108 1635373334.000000
+!s107 output_files/Waveform43.vwf.vt|
+!s90 -work|work|output_files/Waveform43.vwf.vt|
+!i113 1
+R9
+R10
+n@edge@detector_vlg_vec_tst
+vFourDigitSSD
+Z20 !s110 1632366233
+!i10b 1
+!s100 QcM0T36]7?`SdC;o3>S=02
+R2
+ImnKS_4Lj26Rz?hb:T:lA82
+R3
+R0
+w1632366232
+R4
+R5
+!i122 98
+L0 32 1242
+R6
+r1
+!s85 0
+31
+Z21 !s108 1632366233.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@four@digit@s@s@d
+vFourDigitSSD_vlg_vec_tst
+R20
+!i10b 1
+!s100 CbZ33@`SLd9;@zc]0k5mF0
+R2
+I<MW=ojBKGNC4I263;@zEJ2
+R3
+R0
+w1632366231
+8output_files/Waveform10.vwf.vt
+Foutput_files/Waveform10.vwf.vt
+!i122 99
+L0 30 176
+R6
+r1
+!s85 0
+31
+R21
+!s107 output_files/Waveform10.vwf.vt|
+!s90 -work|work|output_files/Waveform10.vwf.vt|
+!i113 1
+R9
+R10
+n@four@digit@s@s@d_vlg_vec_tst
+vFPGA
+Z22 !s110 1635379793
+!i10b 1
+!s100 Rf3e1NLN]<l4NAC0i@5o_2
+R2
+Il:_jIGmX0S<kD[N1T7VCF3
+R3
+R0
+Z23 w1635379791
+R4
+R5
+!i122 382
+L0 32 5304
+R6
+r1
+!s85 0
+31
+Z24 !s108 1635379792.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@f@p@g@a
+vFPGA_vlg_vec_tst
+R22
+!i10b 1
+!s100 I>iRNN1nKDY<=1^TIgd7a0
+R2
+I>oGVPdcoE[<cI8HJX77WK3
+R3
+R0
+w1635379790
+8output_files/Waveform48.vwf.vt
+Foutput_files/Waveform48.vwf.vt
+!i122 383
+L0 30 106
+R6
+r1
+!s85 0
+31
+!s108 1635379793.000000
+!s107 output_files/Waveform48.vwf.vt|
+!s90 -work|work|output_files/Waveform48.vwf.vt|
+!i113 1
+R9
+R10
+n@f@p@g@a_vlg_vec_tst
+vhard_block
+R22
+!i10b 1
+!s100 cJR:;Q<E32B0`SEd9a;=12
+R2
+INSB;@_DKj]OCI[Q=cLEK=1
+R3
+R0
+R23
+R4
+R5
+!i122 382
+L0 5337 34
+R6
+r1
+!s85 0
+31
+R24
+R7
+R8
+!i113 1
+R9
+R10
+vHexToSSD
+Z25 !s110 1632305230
+!i10b 1
+!s100 bHJb1C9@8SdM_j_:bS7Dn3
+R2
+I3QOdOGID_QT;]o5aCRNbP2
+R3
+R0
+w1632305230
+R4
+R5
+!i122 10
+L0 32 339
+R6
+r1
+!s85 0
+31
+Z26 !s108 1632305230.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@hex@to@s@s@d
+vHexToSSD_vlg_vec_tst
+R25
+!i10b 1
+!s100 C^5IW^ZiH;mQfhokTcSkQ3
+R2
+IMPk;G6j:AA]`FT8Qa6Fh52
+R3
+R0
+w1632305229
+Z27 8Waveform.vwf.vt
+Z28 FWaveform.vwf.vt
+!i122 11
+R18
+R6
+r1
+!s85 0
+31
+R26
+Z29 !s107 Waveform.vwf.vt|
+Z30 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R9
+R10
+n@hex@to@s@s@d_vlg_vec_tst
+vHexToSSDBus
+Z31 !s110 1632364409
+!i10b 1
+!s100 VGei@GRVigY5Y@[CVUXZI0
+R2
+ISKh1bXzjWPHllzoNb7G<Q2
+R3
+R0
+w1632364408
+R4
+R5
+!i122 84
+L0 32 323
+R6
+r1
+!s85 0
+31
+Z32 !s108 1632364409.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@hex@to@s@s@d@bus
+vHexToSSDBus_vlg_vec_tst
+R31
+!i10b 1
+!s100 >=TMkmH;H7>9i^SEiz6L71
+R2
+IM;Nl`n0lQ_cMh1OhQ?PQH3
+R3
+R0
+w1632364407
+8output_files/Waveform8.vwf.vt
+Foutput_files/Waveform8.vwf.vt
+!i122 85
+Z33 L0 30 50
+R6
+r1
+!s85 0
+31
+R32
+!s107 output_files/Waveform8.vwf.vt|
+!s90 -work|work|output_files/Waveform8.vwf.vt|
+!i113 1
+R9
+R10
+n@hex@to@s@s@d@bus_vlg_vec_tst
+vQuadEdgeTrigger
+Z34 !s110 1635374816
+!i10b 1
+!s100 ?2lCW2Qloooc]JB0::75e0
+R2
+IMBIeGmiNkI?mQ9B@kd:Zg2
+R3
+R0
+w1635374815
+R4
+R5
+!i122 336
+L0 32 328
+R6
+r1
+!s85 0
+31
+Z35 !s108 1635374816.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@quad@edge@trigger
+vQuadEdgeTrigger_vlg_vec_tst
+R34
+!i10b 1
+!s100 gk?7UMLJkcFjW[3JWT82z0
+R2
+I2L^l<4lNRm2ZPiSUi5AUT0
+R3
+R0
+w1635374814
+8output_files/Waveform45.vwf.vt
+Foutput_files/Waveform45.vwf.vt
+!i122 337
+L0 30 80
+R6
+r1
+!s85 0
+31
+R35
+!s107 output_files/Waveform45.vwf.vt|
+!s90 -work|work|output_files/Waveform45.vwf.vt|
+!i113 1
+R9
+R10
+n@quad@edge@trigger_vlg_vec_tst
+vRecongniserLogic
+Z36 !s110 1635290009
+!i10b 1
+!s100 ;^Wl@GDflF=6Pz^Anni890
+R2
+I=XTaz:J`_F2HQi8B]j?=m1
+R3
+R0
+w1635290008
+R4
+R5
+!i122 208
+L0 32 439
+R6
+r1
+!s85 0
+31
+Z37 !s108 1635290009.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@recongniser@logic
+vRecongniserLogic_vlg_vec_tst
+R36
+!i10b 1
+!s100 jeQFh[OXE1Ej6>]7G[mO81
+R2
+I<IYX5W6Jd:j>Rk=8=NDEL0
+R3
+R0
+w1635290007
+8output_files/Waveform24.vwf.vt
+Foutput_files/Waveform24.vwf.vt
+!i122 209
+R33
+R6
+r1
+!s85 0
+31
+R37
+!s107 output_files/Waveform24.vwf.vt|
+!s90 -work|work|output_files/Waveform24.vwf.vt|
+!i113 1
+R9
+R10
+n@recongniser@logic_vlg_vec_tst
+vRecongniserLogicVerilog
+Z38 !s110 1635299584
+!i10b 1
+!s100 I65Cn=A6zL1@@NM8eefKI3
+R2
+I3g_5I2U35milTZ5?U5H060
+R3
+R0
+w1635299583
+R4
+R5
+!i122 230
+L0 32 365
+R6
+r1
+!s85 0
+31
+Z39 !s108 1635299584.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@recongniser@logic@verilog
+vRecongniserLogicVerilog_vlg_vec_tst
+R38
+!i10b 1
+!s100 ^O<XlzU3YW5IQ69;37_751
+R2
+I5Ij0YJ:>^PEz0E?9zz8l52
+R3
+R0
+w1635299582
+8output_files/Waveform26.vwf.vt
+Foutput_files/Waveform26.vwf.vt
+!i122 231
+L0 30 88
+R6
+r1
+!s85 0
+31
+R39
+!s107 output_files/Waveform26.vwf.vt|
+!s90 -work|work|output_files/Waveform26.vwf.vt|
+!i113 1
+R9
+R10
+n@recongniser@logic@verilog_vlg_vec_tst
+vRippleClockedCounterBus
+Z40 !s110 1635056896
+!i10b 1
+!s100 L@hSZ3<i=J7eQJ8L5?Ba=0
+R2
+IhhlTKfkezNn=]o_`3l1[c3
+R3
+R0
+w1635056895
+R4
+R5
+!i122 116
+L0 32 1224
+R6
+r1
+!s85 0
+31
+Z41 !s108 1635056896.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@ripple@clocked@counter@bus
+vRippleClockedCounterBus_vlg_vec_tst
+R40
+!i10b 1
+!s100 `8h^OLd[19384HC0oD;g13
+R2
+I1eO7T:]ND4;zBCg;gT2OL2
+R3
+R0
+w1635056894
+R27
+R28
+!i122 117
+R11
+R6
+r1
+!s85 0
+31
+R41
+R29
+R30
+!i113 1
+R9
+R10
+n@ripple@clocked@counter@bus_vlg_vec_tst
+vStateHolder
+Z42 !s110 1635256296
+!i10b 1
+!s100 X2fXCGQXom3^L@YEOiJIz1
+R2
+Ib^^zI2;]h_PhmDnkL:X=D1
+R3
+R0
+w1635256295
+R4
+R5
+!i122 168
+L0 32 449
+R6
+r1
+!s85 0
+31
+Z43 !s108 1635256296.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@state@holder
+vStateHolder_vlg_vec_tst
+R42
+!i10b 1
+!s100 DZ]^Lz2MXQ1?b`Ko=>In90
+R2
+If?>RMXLLJo^oio?>H@fk53
+R3
+R0
+w1635256294
+8output_files/Waveform22.vwf.vt
+Foutput_files/Waveform22.vwf.vt
+!i122 169
+L0 30 72
+R6
+r1
+!s85 0
+31
+R43
+!s107 output_files/Waveform22.vwf.vt|
+!s90 -work|work|output_files/Waveform22.vwf.vt|
+!i113 1
+R9
+R10
+n@state@holder_vlg_vec_tst
+vTest
+Z44 !s110 1635254623
+!i10b 1
+!s100 mFl?Zb:iibn^@`bO6m2>20
+R2
+I_TeQeLP6<j=?dE>8?4bjc2
+R3
+R0
+w1635254622
+R4
+R5
+!i122 152
+L0 32 109
+R6
+r1
+!s85 0
+31
+Z45 !s108 1635254623.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@test
+vTest_vlg_vec_tst
+R44
+!i10b 1
+!s100 MgGhJh;@DSBDaXUHiL4?@3
+R2
+I_39kck[M9mB7V=mmnzFUL0
+R3
+R0
+w1635254621
+8output_files/Waveform19.vwf.vt
+Foutput_files/Waveform19.vwf.vt
+!i122 153
+L0 30 36
+R6
+r1
+!s85 0
+31
+R45
+!s107 output_files/Waveform19.vwf.vt|
+!s90 -work|work|output_files/Waveform19.vwf.vt|
+!i113 1
+R9
+R10
+n@test_vlg_vec_tst
+vTFlipFlop
+Z46 !s110 1635254056
+!i10b 1
+!s100 YNl0H_Gczmn<d>V[XUUYE1
+R2
+Iiz^9l;^4=h?C;RXg=V0BC3
+R3
+R0
+w1635254055
+R4
+R5
+!i122 146
+L0 32 144
+R6
+r1
+!s85 0
+31
+Z47 !s108 1635254056.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@t@flip@flop
+vTFlipFlop_vlg_vec_tst
+R46
+!i10b 1
+!s100 GAHdD:Y<YPT<9:JAmG;351
+R2
+I47U3l:Ni=L6<]:HmNX53T1
+R3
+R0
+w1635254054
+8output_files/Waveform18.vwf.vt
+Foutput_files/Waveform18.vwf.vt
+!i122 147
+L0 30 38
+R6
+r1
+!s85 0
+31
+R47
+!s107 output_files/Waveform18.vwf.vt|
+!s90 -work|work|output_files/Waveform18.vwf.vt|
+!i113 1
+R9
+R10
+n@t@flip@flop_vlg_vec_tst
