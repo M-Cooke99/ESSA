@@ -1,0 +1,21 @@
+module InputCycle(
+	 input wire vsync,
+	 input wire [9:0] offset,
+	 input wire [9:0] inputNum,
+    
+	 
+	 output reg [9:0] X,
+	 output reg [9:0] y,
+	 output reg data
+    );
+
+    always @(*)
+    begin
+        // Top-left quadrant (x < 320 and y < 240) or bottom-right quadrant (x >= 320 and y >= 240)
+        if ((x < 320 && y < 240) || (x >= 320 && y >= 240))
+            pixel_on = 1;  // Turn on the pixel
+        else
+            pixel_on = 0;  // Turn off the pixel
+    end
+
+endmodule

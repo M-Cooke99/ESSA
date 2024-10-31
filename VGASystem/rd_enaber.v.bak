@@ -1,0 +1,12 @@
+module rd_enaber(
+    input wire wr_enable,
+    input wire clk,
+    output reg rd_enable	 
+    );
+
+    always @(*)
+    begin
+
+    end
+
+endmodule

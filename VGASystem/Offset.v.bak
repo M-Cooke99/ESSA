@@ -1,0 +1,8 @@
+module Offset(
+	input wire vSync,
+	output reg Offset [0:9]
+);
+
+always @(posedge vSync) begin
+	Offset <= Offset + 1 
+end

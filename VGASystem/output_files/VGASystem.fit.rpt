@@ -1,6 +1,6 @@
 Fitter report for VGASystem
-Mon Oct 28 13:50:11 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Thu Oct 31 18:29:59 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -48,7 +48,7 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2024  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -68,8 +68,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Oct 28 13:50:11 2024          ;
-; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Fitter Status                      ; Successful - Thu Oct 31 18:29:59 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; VGASystem                                      ;
 ; Top-level Entity Name              ; VGASystem                                      ;
 ; Family                             ; Cyclone IV E                                   ;
@@ -152,15 +152,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.4%      ;
+;     Processors 2-10        ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -202,7 +202,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/output_files/VGASystem.pin.
+The pin-out file can be found in C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/output_files/VGASystem.pin.
 
 
 +--------------------------------------------------------------------+
@@ -958,12 +958,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (119006): Selected device EP4CE6E22C8 for design "VGASystem"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (15535): Implemented PLL "ip:inst2|altpll:altpll_component|ip_altpll:auto_generated|pll1" as Cyclone IV E PLL type File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/db/ip_altpll.v Line: 51
-    Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for ip:inst2|altpll:altpll_component|ip_altpll:auto_generated|wire_pll1_clk[0] port File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/db/ip_altpll.v Line: 51
+Info (15535): Implemented PLL "ip:inst2|altpll:altpll_component|ip_altpll:auto_generated|pll1" as Cyclone IV E PLL type File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/db/ip_altpll.v Line: 51
+    Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for ip:inst2|altpll:altpll_component|ip_altpll:auto_generated|wire_pll1_clk[0] port File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/db/ip_altpll.v Line: 51
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -984,7 +984,7 @@ Info (332096): The command derive_clocks did not find any clocks to derive.  No 
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node ip:inst2|altpll:altpll_component|ip_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/db/ip_altpll.v Line: 93
+Info (176353): Automatically promoted node ip:inst2|altpll:altpll_component|ip_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/db/ip_altpll.v Line: 93
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info (176353): Automatically promoted node RST~input (placed in PIN 25 (CLK3, DIFFCLK_1n))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G0
@@ -1018,23 +1018,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/output_files/VGASystem.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/output_files/VGASystem.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5470 megabytes
-    Info: Processing ended: Mon Oct 28 13:50:11 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 5937 megabytes
+    Info: Processing ended: Thu Oct 31 18:29:59 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/output_files/VGASystem.fit.smsg.
+The suppressed messages can be found in C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/output_files/VGASystem.fit.smsg.
 
 

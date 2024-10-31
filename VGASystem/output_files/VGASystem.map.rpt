@@ -1,6 +1,6 @@
 Analysis & Synthesis report for VGASystem
-Mon Oct 28 13:50:06 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Thu Oct 31 18:29:56 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -20,13 +20,14 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  12. Post-Synthesis Netlist Statistics for Top Partition
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2024  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -46,8 +47,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 28 13:50:06 2024          ;
-; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 31 18:29:56 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; VGASystem                                      ;
 ; Top-level Entity Name              ; VGASystem                                      ;
 ; Family                             ; Cyclone IV E                                   ;
@@ -154,36 +155,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-10        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; writemem.v                       ; yes             ; User Verilog HDL File              ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/writemem.v                ;         ;
-; readmem.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/readmem.v                 ;         ;
-; VGADriver.v                      ; yes             ; User Verilog HDL File              ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGADriver.v               ;         ;
-; ClkDivider.v                     ; yes             ; User Wizard-Generated File         ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/ClkDivider.v              ;         ;
-; VGASystem.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGASystem.bdf             ;         ;
-; color_thirds.v                   ; yes             ; User Verilog HDL File              ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/color_thirds.v            ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                       ; c:/users/public/quartus23.1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                       ; c:/users/public/quartus23.1/quartus/libraries/megafunctions/aglobal231.inc    ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/users/public/quartus23.1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/users/public/quartus23.1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/users/public/quartus23.1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/ip_altpll.v                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/db/ip_altpll.v            ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
+; writemem.v                       ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/writemem.v          ;         ;
+; readmem.v                        ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/readmem.v           ;         ;
+; VGADriver.v                      ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/VGADriver.v         ;         ;
+; ClkDivider.v                     ; yes             ; User Wizard-Generated File         ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/ClkDivider.v        ;         ;
+; VGASystem.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/VGASystem.bdf       ;         ;
+; color_thirds.v                   ; yes             ; User Verilog HDL File              ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/color_thirds.v      ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf        ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc    ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
+; db/ip_altpll.v                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/db/ip_altpll.v      ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -690,34 +691,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Oct 28 13:49:54 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Thu Oct 31 18:29:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGASystem -c VGASystem
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file writemem.v
-    Info (12023): Found entity 1: write_mem File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/writemem.v Line: 1
+    Info (12023): Found entity 1: write_mem File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/writemem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file readmem.v
-    Info (12023): Found entity 1: read_mem File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/readmem.v Line: 1
+    Info (12023): Found entity 1: read_mem File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/readmem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgadriver.v
-    Info (12023): Found entity 1: vga_driver File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGADriver.v Line: 1
+    Info (12023): Found entity 1: vga_driver File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/VGADriver.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clkdivider.v
-    Info (12023): Found entity 1: ip File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/ClkDivider.v Line: 40
+    Info (12023): Found entity 1: ip File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/ClkDivider.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file checkeredpattern.v
-    Info (12023): Found entity 1: pixel_pattern File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/CheckeredPattern.v Line: 1
+    Info (12023): Found entity 1: pixel_pattern File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/CheckeredPattern.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgasystem.bdf
     Info (12023): Found entity 1: VGASystem
 Info (12021): Found 1 design units, including 1 entities, in source file color_thirds.v
-    Info (12023): Found entity 1: color_Thirds File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/color_thirds.v Line: 1
+    Info (12023): Found entity 1: color_Thirds File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/color_thirds.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sdram_controller.v
+    Info (12023): Found entity 1: sdram_controller File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/sdram_controller.v Line: 25
 Info (12127): Elaborating entity "VGASystem" for the top level hierarchy
 Warning (275011): Block or symbol "vga_driver" of instance "inst" overlaps another block or symbol
 Info (12128): Elaborating entity "vga_driver" for hierarchy "vga_driver:inst"
-Warning (10230): Verilog HDL assignment warning at VGADriver.v(35): truncated value with size 32 to match size of target (10) File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGADriver.v Line: 35
-Warning (10230): Verilog HDL assignment warning at VGADriver.v(49): truncated value with size 32 to match size of target (10) File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGADriver.v Line: 49
+Warning (10230): Verilog HDL assignment warning at VGADriver.v(35): truncated value with size 32 to match size of target (10) File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/VGADriver.v Line: 35
+Warning (10230): Verilog HDL assignment warning at VGADriver.v(49): truncated value with size 32 to match size of target (10) File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/VGADriver.v Line: 49
 Info (12128): Elaborating entity "ip" for hierarchy "ip:inst2"
-Info (12128): Elaborating entity "altpll" for hierarchy "ip:inst2|altpll:altpll_component" File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/ClkDivider.v Line: 104
-Info (12130): Elaborated megafunction instantiation "ip:inst2|altpll:altpll_component" File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/ClkDivider.v Line: 104
-Info (12133): Instantiated megafunction "ip:inst2|altpll:altpll_component" with the following parameter: File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/ClkDivider.v Line: 104
+Info (12128): Elaborating entity "altpll" for hierarchy "ip:inst2|altpll:altpll_component" File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/ClkDivider.v Line: 104
+Info (12130): Elaborated megafunction instantiation "ip:inst2|altpll:altpll_component" File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/ClkDivider.v Line: 104
+Info (12133): Instantiated megafunction "ip:inst2|altpll:altpll_component" with the following parameter: File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/ClkDivider.v Line: 104
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -774,17 +777,18 @@ Info (12133): Instantiated megafunction "ip:inst2|altpll:altpll_component" with 
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip_altpll.v
-    Info (12023): Found entity 1: ip_altpll File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/db/ip_altpll.v Line: 31
-Info (12128): Elaborating entity "ip_altpll" for hierarchy "ip:inst2|altpll:altpll_component|ip_altpll:auto_generated" File: c:/users/public/quartus23.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: ip_altpll File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/db/ip_altpll.v Line: 31
+Info (12128): Elaborating entity "ip_altpll" for hierarchy "ip:inst2|altpll:altpll_component|ip_altpll:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Info (12128): Elaborating entity "read_mem" for hierarchy "read_mem:inst6"
 Info (12128): Elaborating entity "write_mem" for hierarchy "write_mem:inst5"
-Warning (10230): Verilog HDL assignment warning at writemem.v(7): truncated value with size 32 to match size of target (10) File: C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/writemem.v Line: 7
+Warning (10230): Verilog HDL assignment warning at writemem.v(7): truncated value with size 32 to match size of target (10) File: C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/writemem.v Line: 7
 Info (12128): Elaborating entity "color_Thirds" for hierarchy "color_Thirds:inst4"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out_R" is stuck at GND
     Warning (13410): Pin "out_G" is stuck at GND
     Warning (13410): Pin "out_B" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/output_files/VGASystem.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
@@ -803,9 +807,15 @@ Info (21057): Implemented 55 device resources after synthesis - the final resour
     Info (21061): Implemented 38 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Mon Oct 28 13:50:06 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Thu Oct 31 18:29:56 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/jayti/OneDrive/Documents/GitHub/ESSA/VGASystem/output_files/VGASystem.map.smsg.
 
 
