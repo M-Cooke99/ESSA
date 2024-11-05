@@ -6,12 +6,13 @@
 #define uint16_min 0x0000
 #define uint16_max 0xffff
 
-// Unity based Normaliser
+// Unit Normaliser
 float prescaledNormaliser(uint16_t current_value, uint16_t min, uint16_t max)
 {
     return float(current_value - min)/(max - min);
 }
 
+// This is a simple way to do dynamic scaling based on past data
 uint16_t normaliseData(uint16_t data, uint16_t *currentSensorMin, uint16_t *currentSensorMax)
 {
 

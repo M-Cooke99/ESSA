@@ -37,10 +37,10 @@ void circular_buf_put(cbuf_handle_t self, uint16_t data)
     }
 }
 
-//Read Last
+// Read Last -> this isn't nessecary but I kept forgetting the syntax
 uint16_t circular_buf_return_last(cbuf_handle_t self)
 {
-    return self->buffer[self->head];
+  return self->buffer[self->head];
 }
 
 // Read All
