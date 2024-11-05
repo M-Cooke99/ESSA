@@ -77,6 +77,11 @@ set_location_assignment PIN_25 -to RST
 set_location_assignment PIN_23 -to CLK
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE FourDigitSSD.bdf
+set_global_assignment -name BDF_FILE Sequencer.bdf
+set_global_assignment -name BDF_FILE Sept4x1Mutiplexer.bdf
+set_global_assignment -name BDF_FILE "MUX4-1.bdf"
+set_global_assignment -name BDF_FILE Decoder2to4.bdf
 set_global_assignment -name BDF_FILE HexToSSDBus.bdf
 set_global_assignment -name BDF_FILE HexToSSD.bdf
 set_global_assignment -name BDF_FILE Debouncer.bdf
@@ -90,7 +95,4 @@ set_global_assignment -name VERILOG_FILE color_thirds.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE i2c_master.sv
 set_global_assignment -name VERILOG_FILE i2c_wrapper.v
-set_global_assignment -name BSF_FILE HexToSSDBus.bsf
-set_global_assignment -name BSF_FILE HexToSSD.bsf
-set_global_assignment -name BSF_FILE Debouncer.bsf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
