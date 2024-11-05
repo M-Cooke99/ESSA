@@ -100,5 +100,5 @@ void loop() {
     }
     Serial.print(" -> Average: ");
     Serial.println(circular_buf_return_average(circularBuffer));
-    delay(1000);
+    delay(500);
 }

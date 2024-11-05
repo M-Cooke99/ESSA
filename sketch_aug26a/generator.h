@@ -13,7 +13,7 @@ const float phase = 2 * pi * PHASE_RADIANS;
 // Sin Wave
 float generateSineWave(float time){
     float radians = 2 * pi * FREQUECY_HZ * time;
-    return AMPLITUDE*sin(radians + phase);
+    return AMPLITUDE*sin(radians + phase)/2+0.5;
 }
 
 // Square Wave
