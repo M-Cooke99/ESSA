@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(flipy_rotate90)
 	(text "VCC" (rect 7 128 25 169)(font "Arial" (font_size 6))(vertical))
-	(annotation_block (location)(rect 0 888 56 912))
+	(annotation_block (location)(rect 120 744 176 768))
 )
 (pin
 	(input)
@@ -376,6 +376,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 52 8)(pt 56 12))
 	)
 	(text "VCC" (rect 4 7 45 25)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 600 544 688 576))
 )
 (pin
 	(bidir)
@@ -393,6 +394,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 52 8)(pt 56 12))
 	)
 	(text "VCC" (rect 4 7 45 25)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 600 528 688 560))
 )
 (symbol
 	(rect 456 112 624 256)
