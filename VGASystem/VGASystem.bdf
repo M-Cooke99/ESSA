@@ -155,6 +155,40 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(annotation_block (location)(rect 1120 264 1184 288))
 )
+(pin
+	(bidir)
+	(rect 416 528 592 544)
+	(text "BIDIR" (rect 1 0 48 18)(font "Arial" (font_size 6)))
+	(text "SDA" (rect 90 0 137 22)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 56 12)(pt 78 12))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 78 12)(pt 82 8))
+		(line (pt 56 4)(pt 52 8))
+		(line (pt 52 8)(pt 56 12))
+	)
+	(text "VCC" (rect 4 7 45 25)(font "Arial" (font_size 6)))
+)
+(pin
+	(bidir)
+	(rect 416 512 592 528)
+	(text "BIDIR" (rect 1 0 48 18)(font "Arial" (font_size 6)))
+	(text "SCL" (rect 90 0 128 25)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 56 12)(pt 78 12))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 78 12)(pt 82 8))
+		(line (pt 56 4)(pt 52 8))
+		(line (pt 52 8)(pt 56 12))
+	)
+	(text "VCC" (rect 4 7 45 25)(font "Arial" (font_size 6)))
+)
 (symbol
 	(rect 456 112 624 256)
 	(text "vga_driver" (rect 5 0 108 22)(font "Arial" ))
@@ -438,6 +472,56 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(flipy_rotate90)
 )
+(symbol
+	(rect 248 488 416 600)
+	(text "wrapper" (rect 5 0 85 22)(font "Arial" ))
+	(text "I2C_Read" (rect 8 96 103 121)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 27 22)(font "Arial" ))
+		(text "clk" (rect 21 27 48 49)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 50 22)(font "Arial" ))
+		(text "reset" (rect 21 43 71 65)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "enable" (rect 0 0 67 22)(font "Arial" ))
+		(text "enable" (rect 21 59 88 81)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "data[15..0]" (rect 0 0 105 22)(font "Arial" ))
+		(text "data[15..0]" (rect 59 59 164 81)(font "Arial" ))
+		(line (pt 168 64)(pt 152 64)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(bidir)
+		(text "scl" (rect 0 0 28 22)(font "Arial" ))
+		(text "scl" (rect 137 27 165 49)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(port
+		(pt 168 48)
+		(bidir)
+		(text "sda" (rect 0 0 36 22)(font "Arial" ))
+		(text "sda" (rect 133 43 169 65)(font "Arial" ))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 96))
+	)
+)
 (connector
 	(pt 448 80)
 	(pt 440 80)
@@ -447,19 +531,11 @@ https://fpgasoftware.intel.com/eula.
 	(pt 280 64)
 )
 (connector
-	(pt 456 160)
-	(pt 280 160)
-)
-(connector
 	(pt 624 144)
 	(pt 632 144)
 )
 (connector
 	(pt 280 64)
-	(pt 280 56)
-)
-(connector
-	(pt 184 56)
 	(pt 280 56)
 )
 (connector
@@ -479,10 +555,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 288 80)
 )
 (connector
-	(pt 648 120)
-	(pt 688 120)
-)
-(connector
 	(pt 632 144)
 	(pt 632 88)
 )
@@ -495,25 +567,9 @@ https://fpgasoftware.intel.com/eula.
 	(pt 944 224)
 )
 (connector
-	(pt 624 160)
-	(pt 648 160)
-)
-(connector
-	(pt 648 344)
-	(pt 640 344)
-)
-(connector
 	(pt 648 360)
 	(pt 640 360)
 	(bus)
-)
-(connector
-	(pt 648 120)
-	(pt 648 160)
-)
-(connector
-	(pt 648 160)
-	(pt 648 344)
 )
 (connector
 	(pt 648 408)
@@ -640,8 +696,79 @@ https://fpgasoftware.intel.com/eula.
 	(pt 928 256)
 	(pt 944 256)
 )
+(connector
+	(pt 200 56)
+	(pt 200 520)
+)
+(connector
+	(pt 200 520)
+	(pt 248 520)
+)
+(connector
+	(pt 184 56)
+	(pt 200 56)
+)
+(connector
+	(pt 200 56)
+	(pt 280 56)
+)
+(connector
+	(pt 176 160)
+	(pt 176 536)
+)
+(connector
+	(pt 176 160)
+	(pt 280 160)
+)
+(connector
+	(pt 280 160)
+	(pt 456 160)
+)
+(connector
+	(pt 176 536)
+	(pt 248 536)
+)
+(connector
+	(pt 656 448)
+	(pt 152 448)
+)
+(connector
+	(pt 248 552)
+	(pt 152 552)
+)
+(connector
+	(pt 152 448)
+	(pt 152 552)
+)
+(connector
+	(pt 688 120)
+	(pt 656 120)
+)
+(connector
+	(pt 624 160)
+	(pt 656 160)
+)
+(connector
+	(pt 640 344)
+	(pt 656 344)
+)
+(connector
+	(pt 656 120)
+	(pt 656 160)
+)
+(connector
+	(pt 656 160)
+	(pt 656 344)
+)
+(connector
+	(pt 656 344)
+	(pt 656 448)
+)
 (junction (pt 280 80))
-(junction (pt 648 160))
 (junction (pt 448 144))
 (junction (pt 632 224))
 (junction (pt 640 208))
+(junction (pt 200 56))
+(junction (pt 280 160))
+(junction (pt 656 160))
+(junction (pt 656 344))
