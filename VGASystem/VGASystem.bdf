@@ -1158,10 +1158,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 456 160)
 )
 (connector
-	(pt 656 448)
-	(pt 152 448)
-)
-(connector
 	(pt 688 120)
 	(pt 656 120)
 )
@@ -1476,10 +1472,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 176 536)
 )
 (connector
-	(pt 152 448)
-	(pt 152 552)
-)
-(connector
 	(text "data[15..0]" (rect 400 699 425 806)(font "Intel Clear" )(vertical))
 	(pt 432 928)
 	(pt 432 552)
@@ -1493,10 +1485,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 176 536)
 	(pt 256 536)
-)
-(connector
-	(pt 152 552)
-	(pt 256 552)
 )
 (connector
 	(pt 504 1336)
@@ -1529,6 +1517,18 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 184 80)
 	(pt 216 80)
+)
+(connector
+	(pt 656 448)
+	(pt 160 448)
+)
+(connector
+	(pt 160 448)
+	(pt 160 552)
+)
+(connector
+	(pt 256 552)
+	(pt 160 552)
 )
 (junction (pt 280 80))
 (junction (pt 448 144))

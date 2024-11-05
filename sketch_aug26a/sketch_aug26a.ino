@@ -12,7 +12,7 @@ float time = 0;
 uint16_t sensorReading = 0x0000;
 unsigned char buf_size = 10;
 uint16_t* array = (uint16_t *) malloc(sizeof(uint16_t)*buf_size);
-uint16_t sensorMin = 0xFFFF;
+uint16_t sensorMin = 0x01FF;
 uint16_t sensorMax = 0x0000;
 
 enum generator_states {sine_wave, square_wave, triangle_wave, sensor};
