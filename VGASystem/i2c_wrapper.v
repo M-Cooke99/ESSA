@@ -1,3 +1,4 @@
+// You can't include a system verilog file in a block schematic directly so it needs to be wrapped in verilog for conversion
 module wrapper(
 	input wire clk,
 	input wire reset,
@@ -6,17 +7,20 @@ module wrapper(
 	inout wire sda,
 	output reg[15:0] data
 );
-
+	// We are using both message blocks
 	localparam  DATA_WIDTH          =   16;
 	localparam  REGISTER_WIDTH      =   16;
 	localparam  ADDRESS_WIDTH       =   15;
 	localparam  CLOCK_FREQUENCY     =   50_000_000;
 	localparam  CLOCK_PERIOD        =   1e9/CLOCK_FREQUENCY;
 	
+	// Always read
 	reg             rw              =   1;
 	reg     [15:0]   reg_addr        =   0;
 	reg     [14:0]   device_addr     =   1;
+	// We are using the enable as for control so states can go fast as clock streching is handled inside
 	reg     [15:0]  divider         =   16'h0001;
+	// Not needed
 	reg     [15:0]   data_to_write   =   16'h0000;
 
 
@@ -31,6 +35,7 @@ module wrapper(
 	wire    [DATA_WIDTH-1:0]        i2c_master_miso_data;
 	wire                            i2c_master_busy;
 
+	// Init
 	i2c_master #(.DATA_WIDTH(DATA_WIDTH),.REGISTER_WIDTH(REGISTER_WIDTH),.ADDRESS_WIDTH(ADDRESS_WIDTH))
 	i2c_master(
 					.clock                  (i2c_master_clock),
@@ -50,6 +55,7 @@ module wrapper(
 	);
 
 
+	// Setup
 	assign i2c_master_clock             =   clk;
 	assign i2c_master_reset_n           =   reset;
 	assign i2c_master_enable            =   enable;
