@@ -1,6 +1,7 @@
 #include "circular_buffer.h";
 #include "normaliser.h";
 #include "generator.h";
+#include <Wire.h>
 
 int sound_pin=A0;
 #define TimerHz 32
@@ -37,6 +38,10 @@ void setup() {
     // Sensor
     pinMode(sound_pin,INPUT);
     Serial.begin(250000);
+
+    // I2C
+    Wire.begin(1);
+    Wire.onRequest(requestEvent);
 }
 
 ISR(TIMER1_COMPA_vect){
@@ -70,6 +75,10 @@ ISR(TIMER1_COMPA_vect){
     } else {
         timer ++;
     }
+}
+
+void requestEvent() {
+  Wire.write(circular_buf_return_average(circularBuffer));
 }
 
 void loop() {
