@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Nov  5 06:45:39 2024
+Analysis & Synthesis Status : Successful - Tue Nov  5 07:00:30 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : VGASystem
 Top-level Entity Name : VGASystem
 Family : Cyclone IV E
-Total logic elements : 237
-    Total combinational functions : 237
-    Dedicated logic registers : 77
-Total registers : 77
-Total pins : 29
+Total logic elements : 242
+    Total combinational functions : 239
+    Dedicated logic registers : 80
+Total registers : 80
+Total pins : 30
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

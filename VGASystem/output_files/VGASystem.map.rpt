@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGASystem
-Tue Nov  5 06:45:39 2024
+Tue Nov  5 07:00:30 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -52,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov  5 06:45:39 2024          ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 07:00:30 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; VGASystem                                      ;
 ; Top-level Entity Name              ; VGASystem                                      ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 237                                            ;
-;     Total combinational functions  ; 237                                            ;
-;     Dedicated logic registers      ; 77                                             ;
-; Total registers                    ; 77                                             ;
-; Total pins                         ; 29                                             ;
+; Total logic elements               ; 242                                            ;
+;     Total combinational functions  ; 239                                            ;
+;     Dedicated logic registers      ; 80                                             ;
+; Total registers                    ; 80                                             ;
+; Total pins                         ; 30                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -168,7 +168,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -184,6 +185,7 @@ https://fpgasoftware.intel.com/eula.
 ; Decoder2to4.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/Decoder2to4.bdf                 ;         ;
 ; HexToSSDBus.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/HexToSSDBus.bdf                 ;         ;
 ; HexToSSD.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/HexToSSD.bdf                    ;         ;
+; Debouncer.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/Debouncer.bdf                   ;         ;
 ; writemem.v                       ; yes             ; User Verilog HDL File              ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/writemem.v                      ;         ;
 ; readmem.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/readmem.v                       ;         ;
 ; VGADriver.v                      ; yes             ; User Verilog HDL File              ; C:/Users/Michael Cooke/Desktop/Repos/ESSA/VGASystem/VGADriver.v                     ;         ;
@@ -216,32 +218,32 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 237       ;
+; Estimated Total logic elements              ; 242       ;
 ;                                             ;           ;
-; Total combinational functions               ; 237       ;
+; Total combinational functions               ; 239       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 138       ;
-;     -- 3 input functions                    ; 21        ;
+;     -- 4 input functions                    ; 144       ;
+;     -- 3 input functions                    ; 17        ;
 ;     -- <=2 input functions                  ; 78        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 185       ;
+;     -- normal mode                          ; 187       ;
 ;     -- arithmetic mode                      ; 52        ;
 ;                                             ;           ;
-; Total registers                             ; 77        ;
-;     -- Dedicated logic registers            ; 77        ;
+; Total registers                             ; 80        ;
+;     -- Dedicated logic registers            ; 80        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 29        ;
+; I/O pins                                    ; 30        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Total PLLs                                  ; 1         ;
 ;     -- PLLs                                 ; 1         ;
 ;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 56        ;
-; Total fan-out                               ; 1033      ;
+; Maximum fan-out node                        ; RST~input ;
+; Maximum fan-out                             ; 49        ;
+; Total fan-out                               ; 1052      ;
 ; Average fan-out                             ; 2.75      ;
 +---------------------------------------------+-----------+
 
@@ -251,7 +253,8 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name       ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-------------------+--------------+
-; |VGASystem                           ; 237 (0)             ; 77 (0)                    ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |VGASystem                                                                        ; VGASystem         ; work         ;
+; |VGASystem                           ; 239 (1)             ; 80 (0)                    ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |VGASystem                                                                        ; VGASystem         ; work         ;
+;    |Debouncer:inst8|                 ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|Debouncer:inst8                                                        ; Debouncer         ; work         ;
 ;    |FourDigitSSD:MUX|                ; 19 (0)              ; 15 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|FourDigitSSD:MUX                                                       ; FourDigitSSD      ; work         ;
 ;       |Sept4x1Mutiplexer:inst3|      ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|FourDigitSSD:MUX|Sept4x1Mutiplexer:inst3                               ; Sept4x1Mutiplexer ; work         ;
 ;          |MUX4-1:inst7|              ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|FourDigitSSD:MUX|Sept4x1Mutiplexer:inst3|MUX4-1:inst7                  ; MUX4-1            ; work         ;
@@ -263,8 +266,8 @@ https://fpgasoftware.intel.com/eula.
 ;       |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|ip:inst2|altpll:altpll_component                                       ; altpll            ; work         ;
 ;          |ip_altpll:auto_generated|  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|ip:inst2|altpll:altpll_component|ip_altpll:auto_generated              ; ip_altpll         ; work         ;
 ;    |vga_driver:inst|                 ; 38 (38)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|vga_driver:inst                                                        ; vga_driver        ; work         ;
-;    |wrapper:I2C_Read|                ; 180 (0)             ; 42 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|wrapper:I2C_Read                                                       ; wrapper           ; work         ;
-;       |i2c_master:i2c_master|        ; 180 (180)           ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|wrapper:I2C_Read|i2c_master:i2c_master                                 ; i2c_master        ; work         ;
+;    |wrapper:I2C_Read|                ; 181 (0)             ; 42 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|wrapper:I2C_Read                                                       ; wrapper           ; work         ;
+;       |i2c_master:i2c_master|        ; 181 (181)           ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGASystem|wrapper:I2C_Read|i2c_master:i2c_master                                 ; i2c_master        ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -318,7 +321,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 77    ;
+; Total registers                              ; 80    ;
 ; Number of registers using Synchronous Clear  ; 33    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 20    ;
@@ -791,27 +794,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 77                          ;
+; boundary_port         ; 30                          ;
+; cycloneiii_ff         ; 80                          ;
 ;     CLR               ; 10                          ;
 ;     ENA               ; 8                           ;
 ;     ENA CLR           ; 10                          ;
 ;     SCLR              ; 33                          ;
-;     plain             ; 16                          ;
+;     plain             ; 19                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 244                         ;
+; cycloneiii_lcell_comb ; 246                         ;
 ;     arith             ; 52                          ;
 ;         2 data inputs ; 52                          ;
-;     normal            ; 192                         ;
+;     normal            ; 194                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 19                          ;
-;         3 data inputs ; 21                          ;
-;         4 data inputs ; 138                         ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 144                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.69                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -830,7 +833,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Nov  5 06:45:28 2024
+    Info: Processing started: Tue Nov  5 07:00:21 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGASystem -c VGASystem
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -951,6 +954,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12128): Elaborating entity "cntr_c3g" for hierarchy "FourDigitSSD:MUX|LPM_COUNTER:FrequencyDivider|cntr_c3g:auto_generated" File: c:/users/public/quartus23.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "Sept4x1Mutiplexer" for hierarchy "FourDigitSSD:MUX|Sept4x1Mutiplexer:inst3"
 Info (12128): Elaborating entity "MUX4-1" for hierarchy "FourDigitSSD:MUX|Sept4x1Mutiplexer:inst3|MUX4-1:inst3"
+Info (12128): Elaborating entity "Debouncer" for hierarchy "Debouncer:inst8"
 Info (12128): Elaborating entity "HexToSSDBus" for hierarchy "HexToSSDBus:Dig0"
 Info (12128): Elaborating entity "HexToSSD" for hierarchy "HexToSSDBus:Dig0|HexToSSD:inst"
 Info (12128): Elaborating entity "wrapper" for hierarchy "wrapper:I2C_Read"
@@ -990,16 +994,16 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "VALUE[2]"
     Warning (15610): No output dependent on input pin "VALUE[1]"
     Warning (15610): No output dependent on input pin "VALUE[0]"
-Info (21057): Implemented 267 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
+Info (21057): Implemented 273 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 16 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 237 logic cells
+    Info (21061): Implemented 242 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Tue Nov  5 06:45:39 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Tue Nov  5 07:00:30 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:21
 
 
