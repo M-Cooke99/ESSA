@@ -1,0 +1,7 @@
+
+State Machine - |VGASystem|wrapper:I2C_Read|i2c_master:i2c_master|process_counter
+Name process_counter.11 process_counter.10 process_counter.01 process_counter.00 
+process_counter.00 0 0 0 0 
+process_counter.01 0 0 1 1 
+process_counter.10 0 1 0 1 
+process_counter.11 1 0 0 1 
