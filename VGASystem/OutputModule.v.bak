@@ -1,0 +1,21 @@
+module OutputModule (
+    input wire clk,
+    input wire finished,
+    input wire [479:0] StorageBytes,
+    output reg [15:0] outputbytes
+);
+
+reg [8:0] chunk_index;
+
+always @(posedge clk) begin
+    if (finished) begin
+        if (chunk_index < 480) begin
+            outputbytes <= StorageBytes[chunk_index +: 16]; // Take a 16-bit chunk
+            chunk_index <= chunk_index + 16; // Move to the next 16-bit chunk
+        end else begin
+            chunk_index <= 0; // Reset index after processing all chunks
+        end
+    end
+end
+
+endmodule

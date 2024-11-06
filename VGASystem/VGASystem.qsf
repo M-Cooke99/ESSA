@@ -1,0 +1,127 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2023  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+# Date created = 15:33:18  October 28, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		VGASystem_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY VGASystem
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:33:18  OCTOBER 28, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_106 -to out_R
+set_location_assignment PIN_105 -to out_G
+set_location_assignment PIN_104 -to out_B
+set_location_assignment PIN_103 -to Vsync
+set_location_assignment PIN_101 -to Hsync
+set_location_assignment PIN_23 -to CLK
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BDF_FILE FourDigitSSD.bdf
+set_global_assignment -name BDF_FILE Sequencer.bdf
+set_global_assignment -name BDF_FILE Sept4x1Mutiplexer.bdf
+set_global_assignment -name BDF_FILE "MUX4-1.bdf"
+set_global_assignment -name BDF_FILE Decoder2to4.bdf
+set_global_assignment -name BDF_FILE HexToSSDBus.bdf
+set_global_assignment -name BDF_FILE HexToSSD.bdf
+set_global_assignment -name BDF_FILE Debouncer.bdf
+set_global_assignment -name VERILOG_FILE writemem.v
+set_global_assignment -name VERILOG_FILE readmem.v
+set_global_assignment -name VERILOG_FILE VGADriver.v
+set_global_assignment -name VERILOG_FILE ClkDivider.v
+set_global_assignment -name VERILOG_FILE CheckeredPattern.v
+set_global_assignment -name BDF_FILE VGASystem.bdf
+set_global_assignment -name VERILOG_FILE color_thirds.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name SYSTEMVERILOG_FILE i2c_master.sv
+set_global_assignment -name VERILOG_FILE i2c_wrapper.v
+set_location_assignment PIN_133 -to display1
+set_location_assignment PIN_135 -to display2
+set_location_assignment PIN_136 -to display3
+set_location_assignment PIN_137 -to display4
+set_location_assignment PIN_128 -to segA
+set_location_assignment PIN_121 -to segB
+set_location_assignment PIN_125 -to segC
+set_location_assignment PIN_129 -to segD
+set_location_assignment PIN_132 -to segE
+set_location_assignment PIN_126 -to segF
+set_location_assignment PIN_124 -to segG
+set_location_assignment PIN_91 -to b0
+set_location_assignment PIN_49 -to SDA
+set_location_assignment PIN_50 -to SCL
+set_global_assignment -name BDF_FILE colorVGADriver.bdf
+set_global_assignment -name VERILOG_FILE StorageBytes.v
+set_global_assignment -name VERILOG_FILE SDRAMContoller.v
+set_global_assignment -name VERILOG_FILE offsetTracker.v
+set_global_assignment -name VERILOG_FILE AddrWriter.v
+set_global_assignment -name VERILOG_FILE bitshift.v
+set_global_assignment -name VERILOG_FILE readBytes.v
+set_global_assignment -name VERILOG_FILE StorageModule.v
+set_global_assignment -name VERILOG_FILE OutputModule.v
+set_global_assignment -name BDF_FILE StorageBytes2.bdf
+set_location_assignment PIN_70 -to SD_cas
+set_location_assignment PIN_58 -to SD_CKE
+set_location_assignment PIN_72 -to SD_cs
+set_location_assignment PIN_71 -to SD_ras
+set_location_assignment PIN_69 -to SD_we
+set_location_assignment PIN_25 -to inRST
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

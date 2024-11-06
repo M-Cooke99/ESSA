@@ -1,0 +1,9 @@
+module bitshift(
+input wire input[9:0],
+output reg output [5:0] 
+);
+
+
+always @(*) begin
+	output = input >> 4;
+end

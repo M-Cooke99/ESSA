@@ -1,0 +1,27 @@
+module AddrWriter(
+   rowIn,
+	offset,
+	
+	Addr
+);
+
+
+parameter ROW_WIDTH = 13;
+parameter COL_WIDTH = 9;
+parameter BANK_WIDTH = 2;
+
+parameter HADDR_WIDTH = BANK_WIDTH + ROW_WIDTH + COL_WIDTH;
+
+output [HADDR_WIDTH-1:0] addr;
+
+input [0:9] rowIn;
+input [0:9] offset;
+
+
+
+always @(*)
+begin
+	addr = {01}
+end
+
+endmodule

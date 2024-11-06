@@ -1,0 +1,16 @@
+module StorageBytes(
+    input wire vsync,
+	 input wire [15:0] data,
+	 
+    output reg StorageBytes [479:0]
+);
+
+
+always @(posedge vsync)
+begin
+    StorageBytes <= 0;
+
+    StorageBytes[data] = 1;
+end
+
+endmodule

@@ -1,0 +1,15 @@
+module memChunks(
+    input wire clk,
+    input wire [479:0] StorageBytes // 480-bit storage for simplicity
+	 
+	 output reg
+);
+
+integer i;
+
+always @(posedge clk)
+begin
+   
+end
+
+endmodule

@@ -54,3 +54,4 @@ dkms.conf
 # Quartus
 0QuartusFace/db/
 0QuartusFace/incremental_db/
+/VGASystem/output_files

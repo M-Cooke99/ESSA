@@ -1,0 +1,3 @@
+module readBytes(
+	input data [15:0]
+)
