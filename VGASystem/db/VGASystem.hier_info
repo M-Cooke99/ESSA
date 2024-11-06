@@ -2,6 +2,7 @@
 Hsync <= vga_driver:inst.hsync
 RST => inst3.IN0
 CLK => ip:inst2.inclk0
+<<<<<<< HEAD
 CLK => Debouncer:inst8.Clock
 CLK => inst11.IN1
 CLK => wrapper:I2C_Read.clk
@@ -14,10 +15,13 @@ VALUE[5] => write_mem:inst5.value[5]
 VALUE[6] => write_mem:inst5.value[6]
 VALUE[7] => write_mem:inst5.value[7]
 VALUE[8] => write_mem:inst5.value[8]
+=======
+>>>>>>> 2b2d23e03e29c2c4482c96b3e9214fc5a5347dea
 Vsync <= vga_driver:inst.vsync
 out_R <= color_Thirds:inst4.red_Out
 out_G <= color_Thirds:inst4.green_Out
 out_B <= color_Thirds:inst4.blue_Out
+<<<<<<< HEAD
 segA <= SegNOT[0].DB_MAX_OUTPUT_PORT_TYPE
 b0 => Debouncer:inst8.D_in
 SCL <> wrapper:I2C_Read.scl
@@ -65,6 +69,8 @@ TEST[3] => inLineRegister:inst1.data[3]
 TEST[2] => inLineRegister:inst1.data[2]
 TEST[1] => inLineRegister:inst1.data[1]
 TEST[0] => inLineRegister:inst1.data[0]
+=======
+>>>>>>> 2b2d23e03e29c2c4482c96b3e9214fc5a5347dea
 
 
 |VGASystem|vga_driver:inst
@@ -215,6 +221,7 @@ inclk[1] => pll1.CLK1
 locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
+<<<<<<< HEAD
 |VGASystem|read_mem:inst6
 clk => out~reg0.CLK
 current_vertical[9] => ~NO_FANOUT~
@@ -280,6 +287,50 @@ offset[6] <= offset[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 offset[7] <= offset[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 offset[8] <= offset[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 offset[9] <= offset[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|VGASystem|pixel_pattern:inst1
+x[0] => LessThan0.IN20
+x[0] => LessThan2.IN20
+x[1] => LessThan0.IN19
+x[1] => LessThan2.IN19
+x[2] => LessThan0.IN18
+x[2] => LessThan2.IN18
+x[3] => LessThan0.IN17
+x[3] => LessThan2.IN17
+x[4] => LessThan0.IN16
+x[4] => LessThan2.IN16
+x[5] => LessThan0.IN15
+x[5] => LessThan2.IN15
+x[6] => LessThan0.IN14
+x[6] => LessThan2.IN14
+x[7] => LessThan0.IN13
+x[7] => LessThan2.IN13
+x[8] => LessThan0.IN12
+x[8] => LessThan2.IN12
+x[9] => LessThan0.IN11
+x[9] => LessThan2.IN11
+y[0] => LessThan1.IN20
+y[0] => LessThan3.IN20
+y[1] => LessThan1.IN19
+y[1] => LessThan3.IN19
+y[2] => LessThan1.IN18
+y[2] => LessThan3.IN18
+y[3] => LessThan1.IN17
+y[3] => LessThan3.IN17
+y[4] => LessThan1.IN16
+y[4] => LessThan3.IN16
+y[5] => LessThan1.IN15
+y[5] => LessThan3.IN15
+y[6] => LessThan1.IN14
+y[6] => LessThan3.IN14
+y[7] => LessThan1.IN13
+y[7] => LessThan3.IN13
+y[8] => LessThan1.IN12
+y[8] => LessThan3.IN12
+y[9] => LessThan1.IN11
+y[9] => LessThan3.IN11
+pixel_on <= always0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> 2b2d23e03e29c2c4482c96b3e9214fc5a5347dea
 
 
 |VGASystem|color_Thirds:inst4
@@ -320,6 +371,7 @@ green_Out <= green_Out.DB_MAX_OUTPUT_PORT_TYPE
 blue_Out <= <GND>
 
 
+<<<<<<< HEAD
 |VGASystem|FourDigitSSD:MUX
 Anode[0] <= Decoder2to4:inst.D1
 Anode[1] <= Decoder2to4:inst.D2
@@ -1579,3 +1631,5 @@ out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+=======
+>>>>>>> 2b2d23e03e29c2c4482c96b3e9214fc5a5347dea

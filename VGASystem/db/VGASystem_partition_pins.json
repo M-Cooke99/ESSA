@@ -12,6 +12,7 @@
 					"strict" : false
 				},
 				{
+<<<<<<< HEAD
 					"name" : "display1",
 					"strict" : false
 				},
@@ -97,11 +98,19 @@
 				},
 				{
 					"name" : "SDA",
+=======
+					"name" : "out_R",
+					"strict" : false
+				},
+				{
+					"name" : "out_G",
+>>>>>>> 2b2d23e03e29c2c4482c96b3e9214fc5a5347dea
 					"strict" : false
 				},
 				{
 					"name" : "RST",
 					"strict" : false
+<<<<<<< HEAD
 				},
 				{
 					"name" : "TEST[0]",
@@ -178,6 +187,8 @@
 				{
 					"name" : "b0",
 					"strict" : false
+=======
+>>>>>>> 2b2d23e03e29c2c4482c96b3e9214fc5a5347dea
 				}
 			]
 		}
