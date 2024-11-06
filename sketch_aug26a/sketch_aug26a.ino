@@ -85,6 +85,7 @@ ISR(TIMER1_COMPA_vect){
 
 // On I2C master request
 void requestEvent() {
+  Serial.println(circular_buf_return_average(circularBuffer));
   Wire.write(circular_buf_return_average(circularBuffer));
 }
 
