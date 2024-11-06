@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/06/2024 08:27:09"
+// Generated on "11/06/2024 07:57:21"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          VGASystem
 // 
@@ -92,7 +92,7 @@ VGASystem i1 (
 );
 initial 
 begin 
-#1000000 $finish;
+#1000000 $stop;
 end 
 // VALUE[ 8 ]
 initial

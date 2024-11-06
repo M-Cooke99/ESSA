@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -1.608
-TNS   : -1.608
+Slack : -1.609
+TNS   : -1.609
 
 Type  : Slow 1200mV 85C Model Setup 'FourDigitSSD:MUX|lpm_counter:FrequencyDivider|cntr_c3g:auto_generated|counter_reg_bit[12]'
-Slack : -0.559
-TNS   : -0.559
+Slack : -0.684
+TNS   : -0.684
 
 Type  : Slow 1200mV 85C Model Setup 'FourDigitSSD:MUX|Sequencer:inst2|inst'
 Slack : 0.114
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'inst2|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 36.236
+Slack : 36.305
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
@@ -27,12 +27,16 @@ Slack : 0.497
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'FourDigitSSD:MUX|lpm_counter:FrequencyDivider|cntr_c3g:auto_generated|counter_reg_bit[12]'
-Slack : 0.635
+Slack : 0.584
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'inst2|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.744
 TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ENABLE'
+Slack : -3.000
+TNS   : -26.792
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FourDigitSSD:MUX|Sequencer:inst2|inst'
 Slack : -1.487
@@ -43,27 +47,27 @@ Slack : -1.487
 TNS   : -1.487
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
-Slack : 9.624
+Slack : 9.636
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst2|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.721
+Slack : 19.720
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -1.498
-TNS   : -1.498
+Slack : -1.556
+TNS   : -1.556
 
 Type  : Slow 1200mV 0C Model Setup 'FourDigitSSD:MUX|lpm_counter:FrequencyDivider|cntr_c3g:auto_generated|counter_reg_bit[12]'
-Slack : -0.483
-TNS   : -0.483
+Slack : -0.587
+TNS   : -0.587
 
 Type  : Slow 1200mV 0C Model Setup 'FourDigitSSD:MUX|Sequencer:inst2|inst'
 Slack : 0.210
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'inst2|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 36.423
+Slack : 36.547
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
@@ -75,12 +79,16 @@ Slack : 0.447
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'FourDigitSSD:MUX|lpm_counter:FrequencyDivider|cntr_c3g:auto_generated|counter_reg_bit[12]'
-Slack : 0.568
+Slack : 0.542
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'inst2|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.690
+Slack : 0.693
 TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ENABLE'
+Slack : -3.000
+TNS   : -26.792
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FourDigitSSD:MUX|Sequencer:inst2|inst'
 Slack : -1.487
@@ -91,7 +99,7 @@ Slack : -1.487
 TNS   : -1.487
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
-Slack : 9.551
+Slack : 9.569
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst2|altpll_component|auto_generated|pll1|clk[0]'
@@ -99,11 +107,11 @@ Slack : 19.718
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -0.704
-TNS   : -0.704
+Slack : -0.494
+TNS   : -0.494
 
 Type  : Fast 1200mV 0C Model Setup 'FourDigitSSD:MUX|lpm_counter:FrequencyDivider|cntr_c3g:auto_generated|counter_reg_bit[12]'
-Slack : 0.075
+Slack : 0.011
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'FourDigitSSD:MUX|Sequencer:inst2|inst'
@@ -111,7 +119,7 @@ Slack : 0.624
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'inst2|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 38.349
+Slack : 38.383
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
@@ -123,12 +131,16 @@ Slack : 0.206
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'FourDigitSSD:MUX|lpm_counter:FrequencyDivider|cntr_c3g:auto_generated|counter_reg_bit[12]'
-Slack : 0.275
+Slack : 0.240
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'inst2|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.297
+Slack : 0.298
 TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ENABLE'
+Slack : -3.000
+TNS   : -20.046
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FourDigitSSD:MUX|Sequencer:inst2|inst'
 Slack : -1.000
@@ -139,7 +151,7 @@ Slack : -1.000
 TNS   : -1.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
-Slack : 9.436
+Slack : 9.435
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst2|altpll_component|auto_generated|pll1|clk[0]'

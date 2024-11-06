@@ -77,6 +77,21 @@ set_location_assignment PIN_25 -to RST
 set_location_assignment PIN_23 -to CLK
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_133 -to display1
+set_location_assignment PIN_135 -to display2
+set_location_assignment PIN_136 -to display3
+set_location_assignment PIN_137 -to display4
+set_location_assignment PIN_128 -to segA
+set_location_assignment PIN_121 -to segB
+set_location_assignment PIN_125 -to segC
+set_location_assignment PIN_129 -to segD
+set_location_assignment PIN_132 -to segE
+set_location_assignment PIN_126 -to segF
+set_location_assignment PIN_124 -to segG
+set_location_assignment PIN_91 -to b0
+set_location_assignment PIN_49 -to SDA
+set_location_assignment PIN_50 -to SCL
+set_global_assignment -name VERILOG_FILE inLineRegister.v
 set_global_assignment -name BDF_FILE FourDigitSSD.bdf
 set_global_assignment -name BDF_FILE Sequencer.bdf
 set_global_assignment -name BDF_FILE Sept4x1Mutiplexer.bdf
@@ -95,18 +110,4 @@ set_global_assignment -name VERILOG_FILE color_thirds.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE i2c_master.sv
 set_global_assignment -name VERILOG_FILE i2c_wrapper.v
-set_location_assignment PIN_133 -to display1
-set_location_assignment PIN_135 -to display2
-set_location_assignment PIN_136 -to display3
-set_location_assignment PIN_137 -to display4
-set_location_assignment PIN_128 -to segA
-set_location_assignment PIN_121 -to segB
-set_location_assignment PIN_125 -to segC
-set_location_assignment PIN_129 -to segD
-set_location_assignment PIN_132 -to segE
-set_location_assignment PIN_126 -to segF
-set_location_assignment PIN_124 -to segG
-set_location_assignment PIN_91 -to b0
-set_location_assignment PIN_49 -to SDA
-set_location_assignment PIN_50 -to SCL
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

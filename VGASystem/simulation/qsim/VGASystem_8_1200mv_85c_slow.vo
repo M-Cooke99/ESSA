@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "11/06/2024 07:45:24"
+// DATE "11/06/2024 07:57:48"
 
 // 
 // Device: Altera EP4CE6E22C8 Package TQFP144
@@ -158,6 +158,10 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("VGASystem_8_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
 wire \VALUE[8]~input_o ;
 wire \VALUE[7]~input_o ;
 wire \VALUE[6]~input_o ;
@@ -1962,7 +1966,7 @@ defparam \inst2|altpll_component|auto_generated|pll1 .operation_mode = "normal";
 defparam \inst2|altpll_component|auto_generated|pll1 .pfd_max = 200000;
 defparam \inst2|altpll_component|auto_generated|pll1 .pfd_min = 3076;
 defparam \inst2|altpll_component|auto_generated|pll1 .self_reset_on_loss_lock = "off";
-defparam \inst2|altpll_component|auto_generated|pll1 .simulation_type = "functional";
+defparam \inst2|altpll_component|auto_generated|pll1 .simulation_type = "timing";
 defparam \inst2|altpll_component|auto_generated|pll1 .switch_over_type = "auto";
 defparam \inst2|altpll_component|auto_generated|pll1 .vco_center = 1538;
 defparam \inst2|altpll_component|auto_generated|pll1 .vco_divide_by = 0;
