@@ -89,8 +89,8 @@ set_location_assignment PIN_132 -to segE
 set_location_assignment PIN_126 -to segF
 set_location_assignment PIN_124 -to segG
 set_location_assignment PIN_91 -to b0
-set_location_assignment PIN_49 -to SDA
-set_location_assignment PIN_50 -to SCL
+set_location_assignment PIN_98 -to SDA
+set_location_assignment PIN_99 -to SCL
 set_global_assignment -name VERILOG_FILE inLineRegister.v
 set_global_assignment -name BDF_FILE FourDigitSSD.bdf
 set_global_assignment -name BDF_FILE Sequencer.bdf
