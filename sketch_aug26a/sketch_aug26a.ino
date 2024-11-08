@@ -4,7 +4,7 @@
 #include <Wire.h>
 
 int sound_pin=A0;
-#define TimerHz 64
+#define TimerHz 32
 #define NORMALISE false
 
 uint16_t timer = 0;
@@ -89,6 +89,7 @@ void requestEvent() {
   Wire.write(circular_buf_return_average(circularBuffer));
 }
 
+count
 // As work is all done in interupts this could be empty
 void loop() {
     // Print buffer for debug / testing
@@ -102,4 +103,18 @@ void loop() {
     Serial.print(" -> Average: ");
     Serial.println(circular_buf_return_average(circularBuffer));
     delay(500);
+    switch(state) {
+        case sine_wave:
+            state = square_wave
+            break;
+        case square_wave:
+            triangle_wave
+            break;
+        case triangle_wave:
+            sensor
+            break;
+        case sensor:
+            sine_wave
+        default:
+            break;
 }

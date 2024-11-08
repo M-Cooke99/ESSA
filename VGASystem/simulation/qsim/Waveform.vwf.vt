@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/06/2024 08:27:09"
+// Generated on "11/06/2024 12:58:34"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          VGASystem
 // 
@@ -32,11 +32,9 @@ module VGASystem_vlg_vec_tst();
 // general purpose registers
 reg b0;
 reg CLK;
-reg ENABLE;
 reg RST;
 reg treg_SCL;
 reg treg_SDA;
-reg [0:15] TEST;
 reg [8:0] VALUE;
 // wires                                               
 wire display1;
@@ -44,7 +42,6 @@ wire display2;
 wire display3;
 wire display4;
 wire Hsync;
-wire [0:15] OUT;
 wire out_B;
 wire out_G;
 wire out_R;
@@ -70,9 +67,7 @@ VGASystem i1 (
 	.display2(display2),
 	.display3(display3),
 	.display4(display4),
-	.ENABLE(ENABLE),
 	.Hsync(Hsync),
-	.OUT(OUT),
 	.out_B(out_B),
 	.out_G(out_G),
 	.out_R(out_R),
@@ -86,271 +81,12 @@ VGASystem i1 (
 	.segE(segE),
 	.segF(segF),
 	.segG(segG),
-	.TEST(TEST),
 	.VALUE(VALUE),
 	.Vsync(Vsync)
 );
 initial 
 begin 
 #1000000 $finish;
-end 
-// VALUE[ 8 ]
-initial
-begin
-	VALUE[8] = 1'b1;
-	VALUE[8] = #60000 1'b0;
-	VALUE[8] = #20000 1'b1;
-	VALUE[8] = #20000 1'b0;
-	VALUE[8] = #40000 1'b1;
-	VALUE[8] = #20000 1'b0;
-	VALUE[8] = #40000 1'b1;
-	VALUE[8] = #40000 1'b0;
-	VALUE[8] = #20000 1'b1;
-	VALUE[8] = #20000 1'b0;
-	VALUE[8] = #40000 1'b1;
-	VALUE[8] = #40000 1'b0;
-	VALUE[8] = #160000 1'b1;
-	VALUE[8] = #20000 1'b0;
-	VALUE[8] = #100000 1'b1;
-	VALUE[8] = #40000 1'b0;
-	VALUE[8] = #20000 1'b1;
-	VALUE[8] = #20000 1'b0;
-	VALUE[8] = #60000 1'b1;
-	VALUE[8] = #20000 1'b0;
-	VALUE[8] = #20000 1'b1;
-	VALUE[8] = #40000 1'b0;
-	VALUE[8] = #20000 1'b1;
-	VALUE[8] = #20000 1'b0;
-	VALUE[8] = #40000 1'b1;
-	VALUE[8] = #40000 1'b0;
-end 
-// VALUE[ 7 ]
-initial
-begin
-	VALUE[7] = 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #20000 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #160000 1'b0;
-	VALUE[7] = #60000 1'b1;
-	VALUE[7] = #40000 1'b0;
-	VALUE[7] = #80000 1'b1;
-	VALUE[7] = #20000 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #40000 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #20000 1'b0;
-	VALUE[7] = #40000 1'b1;
-	VALUE[7] = #20000 1'b0;
-	VALUE[7] = #40000 1'b1;
-	VALUE[7] = #60000 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #40000 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #20000 1'b0;
-	VALUE[7] = #40000 1'b1;
-	VALUE[7] = #40000 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #40000 1'b0;
-	VALUE[7] = #20000 1'b1;
-	VALUE[7] = #40000 1'b0;
-end 
-// VALUE[ 6 ]
-initial
-begin
-	VALUE[6] = 1'b1;
-	VALUE[6] = #60000 1'b0;
-	VALUE[6] = #20000 1'b1;
-	VALUE[6] = #100000 1'b0;
-	VALUE[6] = #20000 1'b1;
-	VALUE[6] = #20000 1'b0;
-	VALUE[6] = #20000 1'b1;
-	VALUE[6] = #60000 1'b0;
-	VALUE[6] = #20000 1'b1;
-	VALUE[6] = #80000 1'b0;
-	VALUE[6] = #180000 1'b1;
-	VALUE[6] = #60000 1'b0;
-	VALUE[6] = #60000 1'b1;
-	VALUE[6] = #20000 1'b0;
-	VALUE[6] = #20000 1'b1;
-	VALUE[6] = #80000 1'b0;
-	VALUE[6] = #20000 1'b1;
-	VALUE[6] = #20000 1'b0;
-	VALUE[6] = #20000 1'b1;
-	VALUE[6] = #20000 1'b0;
-	VALUE[6] = #80000 1'b1;
-end 
-// VALUE[ 5 ]
-initial
-begin
-	VALUE[5] = 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #140000 1'b0;
-	VALUE[5] = #40000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #40000 1'b0;
-	VALUE[5] = #80000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #40000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #140000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #40000 1'b0;
-	VALUE[5] = #40000 1'b1;
-	VALUE[5] = #40000 1'b0;
-	VALUE[5] = #20000 1'b1;
-	VALUE[5] = #20000 1'b0;
-	VALUE[5] = #20000 1'b1;
-end 
-// VALUE[ 4 ]
-initial
-begin
-	VALUE[4] = 1'b1;
-	VALUE[4] = #20000 1'b0;
-	VALUE[4] = #40000 1'b1;
-	VALUE[4] = #40000 1'b0;
-	VALUE[4] = #60000 1'b1;
-	VALUE[4] = #20000 1'b0;
-	VALUE[4] = #60000 1'b1;
-	VALUE[4] = #40000 1'b0;
-	VALUE[4] = #100000 1'b1;
-	VALUE[4] = #20000 1'b0;
-	VALUE[4] = #20000 1'b1;
-	VALUE[4] = #20000 1'b0;
-	VALUE[4] = #20000 1'b1;
-	VALUE[4] = #60000 1'b0;
-	VALUE[4] = #20000 1'b1;
-	VALUE[4] = #60000 1'b0;
-	VALUE[4] = #120000 1'b1;
-	VALUE[4] = #80000 1'b0;
-	VALUE[4] = #40000 1'b1;
-	VALUE[4] = #20000 1'b0;
-	VALUE[4] = #60000 1'b1;
-	VALUE[4] = #20000 1'b0;
-	VALUE[4] = #40000 1'b1;
-end 
-// VALUE[ 3 ]
-initial
-begin
-	VALUE[3] = 1'b0;
-	VALUE[3] = #20000 1'b1;
-	VALUE[3] = #40000 1'b0;
-	VALUE[3] = #40000 1'b1;
-	VALUE[3] = #20000 1'b0;
-	VALUE[3] = #20000 1'b1;
-	VALUE[3] = #60000 1'b0;
-	VALUE[3] = #120000 1'b1;
-	VALUE[3] = #20000 1'b0;
-	VALUE[3] = #20000 1'b1;
-	VALUE[3] = #40000 1'b0;
-	VALUE[3] = #20000 1'b1;
-	VALUE[3] = #20000 1'b0;
-	VALUE[3] = #80000 1'b1;
-	VALUE[3] = #60000 1'b0;
-	VALUE[3] = #20000 1'b1;
-	VALUE[3] = #20000 1'b0;
-	VALUE[3] = #20000 1'b1;
-	VALUE[3] = #40000 1'b0;
-	VALUE[3] = #40000 1'b1;
-	VALUE[3] = #20000 1'b0;
-	VALUE[3] = #20000 1'b1;
-	VALUE[3] = #20000 1'b0;
-	VALUE[3] = #100000 1'b1;
-	VALUE[3] = #40000 1'b0;
-	VALUE[3] = #20000 1'b1;
-end 
-// VALUE[ 2 ]
-initial
-begin
-	VALUE[2] = 1'b0;
-	VALUE[2] = #20000 1'b1;
-	VALUE[2] = #40000 1'b0;
-	VALUE[2] = #20000 1'b1;
-	VALUE[2] = #20000 1'b0;
-	VALUE[2] = #20000 1'b1;
-	VALUE[2] = #40000 1'b0;
-	VALUE[2] = #20000 1'b1;
-	VALUE[2] = #20000 1'b0;
-	VALUE[2] = #160000 1'b1;
-	VALUE[2] = #100000 1'b0;
-	VALUE[2] = #20000 1'b1;
-	VALUE[2] = #40000 1'b0;
-	VALUE[2] = #80000 1'b1;
-	VALUE[2] = #20000 1'b0;
-	VALUE[2] = #20000 1'b1;
-	VALUE[2] = #60000 1'b0;
-	VALUE[2] = #40000 1'b1;
-	VALUE[2] = #20000 1'b0;
-	VALUE[2] = #60000 1'b1;
-	VALUE[2] = #20000 1'b0;
-	VALUE[2] = #60000 1'b1;
-	VALUE[2] = #40000 1'b0;
-	VALUE[2] = #20000 1'b1;
-end 
-// VALUE[ 1 ]
-initial
-begin
-	VALUE[1] = 1'b0;
-	VALUE[1] = #100000 1'b1;
-	VALUE[1] = #20000 1'b0;
-	VALUE[1] = #40000 1'b1;
-	VALUE[1] = #140000 1'b0;
-	VALUE[1] = #20000 1'b1;
-	VALUE[1] = #20000 1'b0;
-	VALUE[1] = #40000 1'b1;
-	VALUE[1] = #60000 1'b0;
-	VALUE[1] = #40000 1'b1;
-	VALUE[1] = #20000 1'b0;
-	VALUE[1] = #80000 1'b1;
-	VALUE[1] = #20000 1'b0;
-	VALUE[1] = #40000 1'b1;
-	VALUE[1] = #40000 1'b0;
-	VALUE[1] = #20000 1'b1;
-	VALUE[1] = #40000 1'b0;
-	VALUE[1] = #20000 1'b1;
-	VALUE[1] = #20000 1'b0;
-	VALUE[1] = #20000 1'b1;
-	VALUE[1] = #20000 1'b0;
-	VALUE[1] = #40000 1'b1;
-	VALUE[1] = #40000 1'b0;
-	VALUE[1] = #40000 1'b1;
-end 
-// VALUE[ 0 ]
-initial
-begin
-	VALUE[0] = 1'b1;
-	VALUE[0] = #40000 1'b0;
-	VALUE[0] = #140000 1'b1;
-	VALUE[0] = #60000 1'b0;
-	VALUE[0] = #20000 1'b1;
-	VALUE[0] = #20000 1'b0;
-	VALUE[0] = #160000 1'b1;
-	VALUE[0] = #20000 1'b0;
-	VALUE[0] = #40000 1'b1;
-	VALUE[0] = #40000 1'b0;
-	VALUE[0] = #20000 1'b1;
-	VALUE[0] = #20000 1'b0;
-	VALUE[0] = #40000 1'b1;
-	VALUE[0] = #40000 1'b0;
-	VALUE[0] = #20000 1'b1;
-	VALUE[0] = #40000 1'b0;
-	VALUE[0] = #20000 1'b1;
-	VALUE[0] = #100000 1'b0;
-	VALUE[0] = #40000 1'b1;
-	VALUE[0] = #20000 1'b0;
-	VALUE[0] = #40000 1'b1;
-	VALUE[0] = #20000 1'b0;
 end 
 
 // CLK
@@ -359,6 +95,144 @@ begin
 	CLK = 1'b0;
 	CLK = #10000 1'b1;
 	#10000;
+end 
+// VALUE[ 8 ]
+initial
+begin
+	VALUE[8] = 1'b0;
+	VALUE[8] = #100000 1'b1;
+	VALUE[8] = #50000 1'b0;
+	VALUE[8] = #50000 1'b1;
+	VALUE[8] = #50000 1'b0;
+	VALUE[8] = #150000 1'b1;
+	VALUE[8] = #50000 1'b0;
+	VALUE[8] = #100000 1'b1;
+	VALUE[8] = #50000 1'b0;
+	VALUE[8] = #150000 1'b1;
+	VALUE[8] = #50000 1'b0;
+	VALUE[8] = #50000 1'b1;
+	VALUE[8] = #50000 1'b0;
+	VALUE[8] = #50000 1'b1;
+end 
+// VALUE[ 7 ]
+initial
+begin
+	VALUE[7] = 1'b0;
+	VALUE[7] = #300000 1'b1;
+	VALUE[7] = #150000 1'b0;
+	VALUE[7] = #50000 1'b1;
+	VALUE[7] = #50000 1'b0;
+	VALUE[7] = #50000 1'b1;
+	VALUE[7] = #100000 1'b0;
+	VALUE[7] = #100000 1'b1;
+	VALUE[7] = #50000 1'b0;
+	VALUE[7] = #50000 1'b1;
+	VALUE[7] = #50000 1'b0;
+end 
+// VALUE[ 6 ]
+initial
+begin
+	VALUE[6] = 1'b0;
+	VALUE[6] = #150000 1'b1;
+	VALUE[6] = #50000 1'b0;
+	VALUE[6] = #50000 1'b1;
+	VALUE[6] = #50000 1'b0;
+	VALUE[6] = #50000 1'b1;
+	VALUE[6] = #100000 1'b0;
+	VALUE[6] = #50000 1'b1;
+	VALUE[6] = #100000 1'b0;
+	VALUE[6] = #100000 1'b1;
+	VALUE[6] = #50000 1'b0;
+	VALUE[6] = #100000 1'b1;
+	VALUE[6] = #50000 1'b0;
+	VALUE[6] = #50000 1'b1;
+end 
+// VALUE[ 5 ]
+initial
+begin
+	VALUE[5] = 1'b0;
+	VALUE[5] = #50000 1'b1;
+	VALUE[5] = #50000 1'b0;
+	VALUE[5] = #50000 1'b1;
+	VALUE[5] = #100000 1'b0;
+	VALUE[5] = #100000 1'b1;
+	VALUE[5] = #50000 1'b0;
+	VALUE[5] = #200000 1'b1;
+	VALUE[5] = #200000 1'b0;
+	VALUE[5] = #50000 1'b1;
+	VALUE[5] = #100000 1'b0;
+end 
+// VALUE[ 4 ]
+initial
+begin
+	VALUE[4] = 1'b0;
+	VALUE[4] = #50000 1'b1;
+	VALUE[4] = #50000 1'b0;
+	VALUE[4] = #50000 1'b1;
+	VALUE[4] = #50000 1'b0;
+	VALUE[4] = #450000 1'b1;
+	VALUE[4] = #50000 1'b0;
+	VALUE[4] = #50000 1'b1;
+	VALUE[4] = #50000 1'b0;
+	VALUE[4] = #50000 1'b1;
+	VALUE[4] = #100000 1'b0;
+end 
+// VALUE[ 3 ]
+initial
+begin
+	VALUE[3] = 1'b0;
+	VALUE[3] = #100000 1'b1;
+	VALUE[3] = #50000 1'b0;
+	VALUE[3] = #50000 1'b1;
+	VALUE[3] = #100000 1'b0;
+	VALUE[3] = #100000 1'b1;
+	VALUE[3] = #150000 1'b0;
+	VALUE[3] = #150000 1'b1;
+	VALUE[3] = #50000 1'b0;
+	VALUE[3] = #50000 1'b1;
+	VALUE[3] = #50000 1'b0;
+end 
+// VALUE[ 2 ]
+initial
+begin
+	VALUE[2] = 1'b1;
+	VALUE[2] = #200000 1'b0;
+	VALUE[2] = #100000 1'b1;
+	VALUE[2] = #50000 1'b0;
+	VALUE[2] = #50000 1'b1;
+	VALUE[2] = #50000 1'b0;
+	VALUE[2] = #50000 1'b1;
+	VALUE[2] = #150000 1'b0;
+	VALUE[2] = #150000 1'b1;
+	VALUE[2] = #50000 1'b0;
+	VALUE[2] = #50000 1'b1;
+	VALUE[2] = #50000 1'b0;
+end 
+// VALUE[ 1 ]
+initial
+begin
+	VALUE[1] = 1'b1;
+	VALUE[1] = #50000 1'b0;
+	VALUE[1] = #50000 1'b1;
+	VALUE[1] = #100000 1'b0;
+	VALUE[1] = #300000 1'b1;
+	VALUE[1] = #50000 1'b0;
+	VALUE[1] = #50000 1'b1;
+	VALUE[1] = #150000 1'b0;
+	VALUE[1] = #50000 1'b1;
+	VALUE[1] = #50000 1'b0;
+end 
+// VALUE[ 0 ]
+initial
+begin
+	VALUE[0] = 1'b0;
+	VALUE[0] = #200000 1'b1;
+	VALUE[0] = #250000 1'b0;
+	VALUE[0] = #100000 1'b1;
+	VALUE[0] = #100000 1'b0;
+	VALUE[0] = #100000 1'b1;
+	VALUE[0] = #100000 1'b0;
+	VALUE[0] = #50000 1'b1;
 end 
 endmodule
 

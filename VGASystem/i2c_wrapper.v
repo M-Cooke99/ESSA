@@ -11,8 +11,6 @@ module wrapper(
 	localparam  DATA_WIDTH          =   16;
 	localparam  REGISTER_WIDTH      =   16;
 	localparam  ADDRESS_WIDTH       =   15;
-	localparam  CLOCK_FREQUENCY     =   50_000_000;
-	localparam  CLOCK_PERIOD        =   1e9/CLOCK_FREQUENCY;
 	
 	// Always read
 	reg             rw              =   1;
