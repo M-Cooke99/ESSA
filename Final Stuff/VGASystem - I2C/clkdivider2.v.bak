@@ -1,0 +1,13 @@
+module clkdivhomemade(
+	input wire clk,
+	output wire outputclk
+	
+);
+
+reg [18:0] count
+
+always @(posedge clk) begin
+count = (count + 1)%420000;
+
+if (count = 419999) <= 1'b1;
+end
