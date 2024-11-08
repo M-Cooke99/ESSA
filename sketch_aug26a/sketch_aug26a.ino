@@ -5,15 +5,17 @@
 
 int sound_pin=A0;
 #define TimerHz 32
-#define NORMALISE false
+// #define NORMALISE 1
+// #define DEBUG 1
 
 uint16_t timer = 0;
 float time = 0;
 uint16_t sensorReading = 0x0000;
-unsigned char buf_size = 10;
+unsigned char buf_size = 16;
 uint16_t* array = (uint16_t *) malloc(sizeof(uint16_t)*buf_size);
-uint16_t sensorMin = 0x01FF; // Used for scaling results
+uint16_t sensorMin = 0xFFFF;
 uint16_t sensorMax = 0x0000;
+uint16_t generatorMax = 0x01FF; // Used for scaling results
 
 // Ready for stateful operation after VGA + I2C are working
 enum generator_states {sine_wave, square_wave, triangle_wave, sensor};
@@ -50,26 +52,25 @@ void setup() {
 }
 
 ISR(TIMER1_COMPA_vect){
-    time = prescaledNormaliser(timer, 0, TimerHz*0.5);
+    time = prescaledNormaliser(timer, 0, TimerHz);
     // Generate Data
     switch(state) {
         case sine_wave:
-            circular_buf_put(circularBuffer, sensorMin * generateSineWave(time));
+            circular_buf_put(circularBuffer, generatorMax * generateSineWave(time));
             break;
         case square_wave:
-            circular_buf_put(circularBuffer, sensorMin * generateSquareWave(time));
+            circular_buf_put(circularBuffer, generatorMax * generateSquareWave(time));
             break;
         case triangle_wave:
-            Serial.println(generateTriangleWave(time));
-            circular_buf_put(circularBuffer, sensorMin * generateTriangleWave(time));
+            circular_buf_put(circularBuffer, generatorMax * generateTriangleWave(time));
             break;
         case sensor:
             sensorReading = analogRead(sound_pin);
             // This can be done compile time as it won't be togglable
-            #ifndef NORMALISE 
-            circular_buf_put(circularBuffer, normaliseData(sensorReading, &sensorMin, &sensorMax));
+            #ifdef NORMALISE 
+            circular_buf_put(circularBuffer, generatorMax * normaliseData(sensorReading, &sensorMin, &sensorMax));
             #else
-            circular_buf_put(circularBuffer, sensorReading);
+            circular_buf_put(circularBuffer, prescaledNormaliser(sensorReading, 50, 300));
             #endif
             break;
         default:
@@ -89,7 +90,6 @@ void requestEvent() {
   Wire.write(circular_buf_return_average(circularBuffer));
 }
 
-count
 // As work is all done in interupts this could be empty
 void loop() {
     // Print buffer for debug / testing
@@ -105,16 +105,19 @@ void loop() {
     delay(500);
     switch(state) {
         case sine_wave:
-            state = square_wave
+            state = square_wave;
             break;
         case square_wave:
-            triangle_wave
+            state = triangle_wave;
             break;
         case triangle_wave:
-            sensor
+            state = sensor;
             break;
         case sensor:
-            sine_wave
+            state = sine_wave;
+            Serial.println("");
+            break;
         default:
             break;
+    }
 }

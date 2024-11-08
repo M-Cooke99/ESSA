@@ -2,8 +2,6 @@
 #ifndef circular_buffer_h
 #define circular_buffer_h
 
-#define DEBUG false
-
 // Circular Buffer
 typedef struct circular_buf_t circular_buf_t;
 typedef circular_buf_t* cbuf_handle_t;
@@ -53,7 +51,7 @@ uint16_t* circular_buf_return_buf(cbuf_handle_t self, uint16_t* array)
         position = 0;
     }
     array[j] = self->buffer[position];    
-    #ifndef DEBUG
+    #ifdef DEBUG
     Serial.print(position);
     Serial.print(": ");
     Serial.print(array[j]);
@@ -76,7 +74,7 @@ uint16_t circular_buf_return_average(cbuf_handle_t self)
         position = 0;
     }
     total += self->buffer[position];
-    #ifndef DEBUG
+    #ifdef DEBUG
     Serial.print(position);
     Serial.print(total);
     Serial.println();

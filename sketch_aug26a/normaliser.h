@@ -2,7 +2,7 @@
 #ifndef NORMALISE
 #define NORMALISE
 
-#define DEBUG false
+// #define DEBUG 1
 #define uint16_min 0x0000
 #define uint16_max 0xffff
 
@@ -13,30 +13,28 @@ float prescaledNormaliser(uint16_t current_value, uint16_t min, uint16_t max)
 }
 
 // This is a simple way to do dynamic scaling based on past data
-uint16_t normaliseData(uint16_t data, uint16_t *currentSensorMin, uint16_t *currentSensorMax)
+float normaliseData(uint16_t data, uint16_t *currentSensorMin, uint16_t *currentSensorMax)
 {
 
-    #ifndef DEBUG
+    #ifdef DEBUG
     Serial.print("Data: ");
     Serial.println(data);
     #endif
     
     if (data < *currentSensorMin){
-        #ifndef DEBUG
+        #ifdef DEBUG
         Serial.println("NEW MIN");
         #endif
         *currentSensorMin = data;
     } 
     else if (data > *currentSensorMax) {
-        #ifndef DEBUG
+        #ifdef DEBUG
         Serial.println("NEW MAX");
         #endif
         *currentSensorMax = data;
     }
 
-    float result = prescaledNormaliser(data, *currentSensorMin, *currentSensorMax);
-
-    return uint16_min + (uint16_max - uint16_min) * result;
+    return prescaledNormaliser(data, *currentSensorMin, *currentSensorMax);
 }
 
 #endif
